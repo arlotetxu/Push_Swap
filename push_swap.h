@@ -11,9 +11,12 @@
 # include <stdio.h>
 # include <limits.h>
 
+
+
 //put your function headers here
 int			sign_count(char *str);
 int			ft_atoi(const char *str);
 int			ft_check_limits(char *str_nb);
+char 		*ft_int2binary(int n)
 
 #endif //PUSH_SWAP_PUSH_SWAP_H
