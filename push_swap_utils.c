@@ -30,7 +30,7 @@ int	sign_count(char *str)
 /*
  * ft_atoi converts a string number in an integer number
  */
-int ft_atoi(const char *str)
+size_t ft_atoi(const char *str)
 {
 	size_t	i;
 	size_t	n;
@@ -90,4 +90,13 @@ char *ft_int2binary(int n)
 	}
 	nbinary_s[j] = '\0';
 	return (nbinary_s);
+}
+
+/*
+ * Meter los numeros en la lista enlazada
+ */
+
+void	ft_add_nb_list(int nb)
+{
+
 }

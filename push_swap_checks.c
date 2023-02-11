@@ -9,19 +9,13 @@
  */
 int	ft_check_limits(char *str_nb)
 {
-	//int	i;
 	long long	nb;
 
-	//i = 0;
 	nb = ft_atoi(str_nb);
-	if (nb < INT_MIN || nb > INT_MAX)
+	if (nb < -2147483648 || nb > 2147483647)
 	{
-		printf("El numero introducido: %lld ESTA FUERA DE RANGO INT\n", nb);
-		return (1);
+		write(1, "Error\n", 6);
+		exit(1);
 	}
-	else
-	{
-		printf("%lld\n", nb);
-	}
-		return (0);
+	return (nb);
 }
