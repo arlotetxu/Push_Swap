@@ -74,10 +74,10 @@ static int	ft_checksign(const char *str)
 		return (1);
 }
 
-int	ft_atoi(const char *str)
+long long	ft_atoi(const char *str)
 {
 	int	i;
-	int	n;
+	long long	n;
 	int	sign;
 	int	c_sign;
 

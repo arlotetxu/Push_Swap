@@ -1,31 +1,34 @@
 
 #include "push_swap.h"
 
-int main(int argc, char **argv)
+/*
+ * Error Control:
+ * Error(1) --> Error in function ps_ft_isdigit(char **argv) / some input is not a digit
+ * Error(2) --> Error in function ft_check_limits(argv[i++]) / nb exceeds the integer limits
+ * Error(4) --> Error in function ft_check_dupli(ft_add_nb_array(argc, argv)) / nb duplicated
+ */
+void	ft_push_swap(int argc, char **argv)
 {
 	int	i;
-	int nb;
-	int *nb_array;
 
 	i = 1;
-	nb = 0;
+	while (argv[i])
+	{
+		// Check if the inputs are digits
+		ps_ft_isdigit(argv);
+		// Check whether the number is inside INT limits
+		ft_check_limits(argv[i++]);
+	}
+	// Check if an input number is duplicated
+	ft_check_dupli(ft_add_nb_array(argc, argv));
+}
+
+
+int main(int argc, char **argv)
+{
 	if (argc > 1)
 	{
-		while (argv[i])
-		{
-			// Check whether the number is inside INT limits
-			nb = ft_check_limits(argv[i++]);
-			printf("nb: %d\n", nb);
-		}
-		//Creating an integer array to sort the values
-		nb_array = ft_add_nb_array(argc, argv);
-		//Check if the array has been rightly created
-		i = 0;
-		while(nb_array[i])
-		{
-			printf("Valor %d en main: %d\n", i, nb_array[i]);
-			i++;
-		}
+		ft_push_swap(argc, argv);
 	}
 	return 0;
 }

@@ -21,10 +21,18 @@ typedef struct n_list
 }					t_node;
 
 //put your function headers here
-int			sign_count(char *str);
+
+//Function to control the input
 int			ft_check_limits(char *str_nb);
+void		ps_ft_isdigit(char **argv);
+void		ft_check_dupli(int *nb_array);
+void		ft_error_exit(void);
+
+//Other
 char 		*ft_int2binary(int n);
 int			*ft_add_nb_array(int argc, char **argv);
 
+//Main function
+void		ft_push_swap(int argc, char **argv);
 
 #endif //PUSH_SWAP_PUSH_SWAP_H
