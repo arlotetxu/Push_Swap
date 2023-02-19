@@ -1,7 +1,6 @@
 //
 // Created by Jose Manuel Florido Pereña on 30/1/23.
 //
-
 #include "push_swap.h"
 
 /*
@@ -56,10 +55,10 @@ void	ft_check_dupli(int *nb_array, int argc)
 	int	j;
 
 	i = 0;
-	while (i < argc - 2)
+	while (i < argc - 1)
 	{
 		j = i + 1;
-		while (j < argc - i - 1)
+		while (j < argc - 1)
 		{
 			if (nb_array[j] == nb_array[i])
 			{

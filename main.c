@@ -6,6 +6,7 @@
  * Error(1) --> Error in function ps_ft_isdigit(char **argv) / some input is not a digit
  * Error(2) --> Error in function ft_check_limits(argv[i++]) / nb exceeds the integer limits
  * Error(4) --> Error in function ft_check_dupli(ft_add_nb_array(argc, argv)) / nb duplicated
+ * Error(5) --> ft_atoi cannot convert the input string in a number
  */
 void	ft_push_swap(int argc, char **argv)
 {
