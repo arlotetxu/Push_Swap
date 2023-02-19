@@ -54,8 +54,6 @@ int	*ft_add_nb_array(int argc, char **argv)
 	int i;
 
 	nb_arr = malloc(sizeof (int) * (argc - 1));//TODO Ojo hacer "free" antes de finalizar programa
-//	printf("INT: %lu\n", sizeof (int));
-//	printf("INT: %lu\n", sizeof (nb_arr));
 	if (!nb_arr)
 		return (0);
 	i = 0;
@@ -68,8 +66,42 @@ int	*ft_add_nb_array(int argc, char **argv)
 //	i = 0;
 //	while (nb_arr[i])
 //	{
-//		printf("Valor %d: %d\n", i, nb_arr[i]);
+//		printf("Valor %d en funcion: %d\n", i, nb_arr[i]);
 //		i++;
 //	}
 	return (nb_arr);
+}
+
+/*
+ *
+ */
+void	ft_sort_int_array(int *nbs, int argc)
+{
+	int	i;
+	int	j;
+	int	aux;
+
+	i = 0;
+	while (i < argc - 2)
+	{
+		j = 0;
+		while (j < argc - i - 2 )
+		{
+			if (nbs[j] > nbs[j + 1])
+			{
+				aux = nbs[j];
+				nbs[j] = nbs[j + 1];
+				nbs[j + 1] = aux;
+			}
+			j++;
+		}
+		i++;
+	}
+	//Checking the order
+	i = 0;
+	while (i < argc - 1)
+	{
+		printf("Index %d: %d\n", i, nbs[i]);
+		i++;
+	}
 }

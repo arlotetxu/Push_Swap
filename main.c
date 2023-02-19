@@ -15,12 +15,13 @@ void	ft_push_swap(int argc, char **argv)
 	while (argv[i])
 	{
 		// Check if the inputs are digits
-		ps_ft_isdigit(argv);
+		//ps_ft_isdigit(argv);
 		// Check whether the number is inside INT limits
 		ft_check_limits(argv[i++]);
 	}
 	// Check if an input number is duplicated
-	ft_check_dupli(ft_add_nb_array(argc, argv));
+	ft_check_dupli(ft_add_nb_array(argc, argv), argc);
+	ft_sort_int_array(ft_add_nb_array(argc, argv), argc);
 }
 
 

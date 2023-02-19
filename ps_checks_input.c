@@ -50,16 +50,16 @@ int	ft_check_limits(char *str_nb)
  * It receives as an argument an int array previously created with the function
  * ft_add_nb_array(int argc, char **argv) whithin the file ps_utils.c
  */
-void	ft_check_dupli(int *nb_array)
+void	ft_check_dupli(int *nb_array, int argc)
 {
 	int	i;
 	int	j;
 
 	i = 0;
-	while (nb_array[i])
+	while (i < argc - 2)
 	{
 		j = i + 1;
-		while (nb_array[j])
+		while (j < argc - i - 1)
 		{
 			if (nb_array[j] == nb_array[i])
 			{

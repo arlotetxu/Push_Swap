@@ -25,12 +25,13 @@ typedef struct n_list
 //Function to control the input
 int			ft_check_limits(char *str_nb);
 void		ps_ft_isdigit(char **argv);
-void		ft_check_dupli(int *nb_array);
+void		ft_check_dupli(int *nb_array, int argc);
 void		ft_error_exit(void);
 
 //Other
 char 		*ft_int2binary(int n);
 int			*ft_add_nb_array(int argc, char **argv);
+void		ft_sort_int_array(int *nbs, int argc);
 
 //Main function
 void		ft_push_swap(int argc, char **argv);
