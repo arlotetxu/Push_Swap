@@ -69,6 +69,7 @@ int	*ft_add_nb_array(int argc, char **argv)
 //		printf("Valor %d en funcion: %d\n", i, nb_arr[i]);
 //		i++;
 //	}
+	ft_sort_int_array(nb_arr, argc);
 	return (nb_arr);
 }
 
@@ -104,4 +105,27 @@ void	ft_sort_int_array(int *nbs, int argc)
 		printf("Index %d: %d\n", i, nbs[i]);
 		i++;
 	}
+}
+
+/*
+ * ft_get_array_index(int nb, int argc, char **argv) duplicates the array
+ * and return the index of the given number in the parameter "nb"
+ */
+int	ft_get_array_index(int nb, int argc, char **argv)
+{
+	int	i;
+	int	*nb_array;
+
+	nb_array = ft_add_nb_array(argc, argv);
+	i = 0;
+	while (i < argc - 1)
+	{
+		if (nb == nb_array[i])
+		{
+			printf("Index of %d: %d\n", nb, i);
+			return (i);
+		}
+		i++;
+	}
+	return (0);
 }

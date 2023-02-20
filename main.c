@@ -10,19 +10,22 @@
  */
 void	ft_push_swap(int argc, char **argv)
 {
-	int	i;
-
+	int		i;
+//	t_node	*stack_a;
+//	t_node	*stack_b;
+//
+//	stack_a = NULL;
+//	stack_b = NULL;
 	i = 1;
 	while (argv[i])
 	{
-		// Check if the inputs are digits
-		//ps_ft_isdigit(argv);
 		// Check whether the number is inside INT limits
 		ft_check_limits(argv[i++]);
 	}
-	// Check if an input number is duplicated
+	// Check if an input number is duplicated and sort the numbers
+	// in the int array
 	ft_check_dupli(ft_add_nb_array(argc, argv), argc);
-	ft_sort_int_array(ft_add_nb_array(argc, argv), argc);
+	ft_get_array_index(-1, argc, argv);
 }
 
 

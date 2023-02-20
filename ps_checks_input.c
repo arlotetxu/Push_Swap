@@ -6,30 +6,32 @@
 /*
  * ps_ft_isdigit checks if all the input parameters are digits
  */
-void	ps_ft_isdigit(char **argv)
-{
-	int	i;
-	int	j;
-
-	i = 1;
-	while (argv[i])
-	{
-		j = 0;
-		while (argv[i][j])
-		{
-			if (ft_isdigit(argv[i][j]) == 0)
-			{
-				write(1, "Error(1)\n", 9);
-				exit(2);
-			}
-			j++;
-		}
-		i++;
-	}
-}
+//void	ps_ft_isdigit(char **argv)
+//{
+//	int	i;
+//	int	j;
+//
+//	i = 1;
+//	while (argv[i])
+//	{
+//		j = 0;
+//		while (argv[i][j])
+//		{
+//			if (ft_isdigit(argv[i][j]) == 0)
+//			{
+//				write(1, "Error(1)\n", 9);
+//				exit(2);
+//			}
+//			j++;
+//		}
+//		i++;
+//	}
+//}
 
 /*
  * ft_check_limits checks if each argument is within the INT range
+ * ft_atoi has been modified in order to check if the parameters contains
+ * numbers.
  */
 int	ft_check_limits(char *str_nb)
 {
