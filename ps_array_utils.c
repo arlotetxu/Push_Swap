@@ -99,12 +99,12 @@ void	ft_sort_int_array(int *nbs, int argc)
 		i++;
 	}
 	//Checking the order
-	i = 0;
-	while (i < argc - 1)
-	{
-		printf("Index %d: %d\n", i, nbs[i]);
-		i++;
-	}
+//	i = 0;
+//	while (i < argc - 1)
+//	{
+//		printf("Index %d: %d\n", i, nbs[i]);
+//		i++;
+//	}
 }
 
 /*
@@ -122,7 +122,7 @@ int	ft_get_array_index(int nb, int argc, char **argv)
 	{
 		if (nb == nb_array[i])
 		{
-			printf("Index of %d: %d\n", nb, i);
+			//printf("Index of %d: %d\n", nb, i);
 			return (i);
 		}
 		i++;

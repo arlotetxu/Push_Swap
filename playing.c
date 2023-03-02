@@ -1,68 +1,58 @@
+//#include<stdlib.h>
+//#include<stdio.h>
 //
-// Created by Jose Manuel Florido Perena on 2/4/23.
+//typedef struct p_list
+//{
+//	int				nb;
+//	int				index;
+//	struct p_list	*next;
+//}					t_node;
 //
-
-#include<stdio.h>
-#include<stdlib.h>
-
-
-static int	ft_checksign(const char *str)
-{
-	int	i;
-	int	count;
-
-	i = 0;
-	count = 0;
-	while (!(str[i] >= 48 && str[i] <= 57))
-	{
-		if (str[i] == 43 || str[i] == 45)
-			count++;
-		i++;
-	}
-	if (count > 1)
-		return (0);
-	else
-		return (1);
-}
-
-long long	ft_atoi(const char *str)
-{
-	int	i;
-	long long	n;
-	int	sign;
-	int	c_sign;
-
-	i = 0;
-	sign = 1;
-	c_sign = ft_checksign(str);
-	while ((str[i] != '\0' && str[i] >= 9 && str[i] <= 13) || (str[i] == 32))
-		i++;
-	while (str[i] != '\0' && (str[i] == 43 || str[i] == 45))
-	{
-		if (c_sign == 0)
-			return (0);
-		if (str[i] == 45)
-			sign = -1;
-		i++;
-	}
-	n = 0;
-	if (str[i] < 48 || str[i] > 57)
-		printf("Controlando\n");
-	while (str[i] != '\0' && (str[i] >= 48 && str[i] <= 57))
-	{
-		n = n * 10 + (str[i] - '0');
-		i++;
-	}
-	return (n * sign);
-}
-
-int main(void)
-{
-	char	*c;
-	int 	nb;
-
-	c = "-12a";
-	nb = ft_atoi(c);
-	printf("valor: %d\n", nb);
-	return (0);
-}
+//void	ft_add_lstnode(t_node **head_ref, int num, int ind)
+//{
+//	t_node	*new_node;
+//	t_node	*lst_node;
+//
+//	new_node = (t_node *) malloc(sizeof (t_node));
+//	new_node->nb = num;
+//	new_node->index = ind;
+//	new_node->next = NULL;
+//	//Si la lista esta ya vacia, el nodo que creamos sera el de cabecera
+//	if (*head_ref == NULL)
+//	{
+//		*head_ref = new_node;
+//		return ;
+//	}
+//	//Si no esta vacia, hay que recorrerla hasta llegar al final donde next == NULL
+//	lst_node = (t_node *) malloc(sizeof(t_node));
+//	lst_node = *head_ref;
+//	while (lst_node->next != NULL)
+//		lst_node = lst_node->next;
+//	lst_node->next = new_node;
+//}
+//
+//void	ft_print_list(t_node *head_ref)
+//{
+//	while (head_ref->next != NULL)
+//	{
+//		printf("Number: %d -- Index: %d\n", head_ref->nb, head_ref->index);
+//		head_ref = head_ref->next;
+//	}
+//}
+//
+//
+//int	main(void)
+//{
+//	t_node	*list_a;
+//	int		i = 0;
+//	int		nb[5] = {12, 18, 1, 67, 0};
+//
+//	list_a = NULL;
+//	while (i <= 5)
+//	{
+//		ft_add_lstnode(&list_a, nb[i], i);
+//		i++;
+//	}
+//	ft_print_list(list_a);
+//	return (0);
+//}

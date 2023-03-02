@@ -28,11 +28,15 @@ int			ft_check_limits(char *str_nb);
 void		ft_check_dupli(int *nb_array, int argc);
 void		ft_error_exit(void);
 
-//Other
+//Function to operate int array
 char 		*ft_int2binary(int n);
 int			*ft_add_nb_array(int argc, char **argv);
 void		ft_sort_int_array(int *nbs, int argc);
 int			ft_get_array_index(int nb, int argc, char **argv);
+
+//Function to operate lists
+void		ft_add_info_list(t_node **head_ref_a, int argc, char **argv);
+void		ft_print_list(t_node *head_ref);
 
 //Main function
 void		ft_push_swap(int argc, char **argv);

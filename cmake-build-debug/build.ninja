@@ -48,43 +48,43 @@ build cmake_object_order_depends_target_Push_Swap: phony || CMakeFiles/Push_Swap
 
 build CMakeFiles/Push_Swap.dir/main.c.o: C_COMPILER__Push_Swap_Debug /Users/arlo/Documents/Mis_Proyectos/42_cursus/Push_Swap/main.c || cmake_object_order_depends_target_Push_Swap
   DEP_FILE = CMakeFiles/Push_Swap.dir/main.c.o.d
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu99
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -std=gnu99
   OBJECT_DIR = CMakeFiles/Push_Swap.dir
   OBJECT_FILE_DIR = CMakeFiles/Push_Swap.dir
 
 build CMakeFiles/Push_Swap.dir/ps_checks_input.c.o: C_COMPILER__Push_Swap_Debug /Users/arlo/Documents/Mis_Proyectos/42_cursus/Push_Swap/ps_checks_input.c || cmake_object_order_depends_target_Push_Swap
   DEP_FILE = CMakeFiles/Push_Swap.dir/ps_checks_input.c.o.d
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu99
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -std=gnu99
   OBJECT_DIR = CMakeFiles/Push_Swap.dir
   OBJECT_FILE_DIR = CMakeFiles/Push_Swap.dir
 
-build CMakeFiles/Push_Swap.dir/ps_utils.c.o: C_COMPILER__Push_Swap_Debug /Users/arlo/Documents/Mis_Proyectos/42_cursus/Push_Swap/ps_utils.c || cmake_object_order_depends_target_Push_Swap
-  DEP_FILE = CMakeFiles/Push_Swap.dir/ps_utils.c.o.d
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu99
+build CMakeFiles/Push_Swap.dir/ps_array_utils.c.o: C_COMPILER__Push_Swap_Debug /Users/arlo/Documents/Mis_Proyectos/42_cursus/Push_Swap/ps_array_utils.c || cmake_object_order_depends_target_Push_Swap
+  DEP_FILE = CMakeFiles/Push_Swap.dir/ps_array_utils.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -std=gnu99
   OBJECT_DIR = CMakeFiles/Push_Swap.dir
   OBJECT_FILE_DIR = CMakeFiles/Push_Swap.dir
 
 build CMakeFiles/Push_Swap.dir/playing.c.o: C_COMPILER__Push_Swap_Debug /Users/arlo/Documents/Mis_Proyectos/42_cursus/Push_Swap/playing.c || cmake_object_order_depends_target_Push_Swap
   DEP_FILE = CMakeFiles/Push_Swap.dir/playing.c.o.d
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu99
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -std=gnu99
   OBJECT_DIR = CMakeFiles/Push_Swap.dir
   OBJECT_FILE_DIR = CMakeFiles/Push_Swap.dir
 
 build CMakeFiles/Push_Swap.dir/libft/ft_atoi.c.o: C_COMPILER__Push_Swap_Debug /Users/arlo/Documents/Mis_Proyectos/42_cursus/Push_Swap/libft/ft_atoi.c || cmake_object_order_depends_target_Push_Swap
   DEP_FILE = CMakeFiles/Push_Swap.dir/libft/ft_atoi.c.o.d
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu99
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -std=gnu99
   OBJECT_DIR = CMakeFiles/Push_Swap.dir
   OBJECT_FILE_DIR = CMakeFiles/Push_Swap.dir/libft
 
 build CMakeFiles/Push_Swap.dir/libft/ft_isdigit.c.o: C_COMPILER__Push_Swap_Debug /Users/arlo/Documents/Mis_Proyectos/42_cursus/Push_Swap/libft/ft_isdigit.c || cmake_object_order_depends_target_Push_Swap
   DEP_FILE = CMakeFiles/Push_Swap.dir/libft/ft_isdigit.c.o.d
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu99
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -std=gnu99
   OBJECT_DIR = CMakeFiles/Push_Swap.dir
   OBJECT_FILE_DIR = CMakeFiles/Push_Swap.dir/libft
 
 build CMakeFiles/Push_Swap.dir/ps_list_utils.c.o: C_COMPILER__Push_Swap_Debug /Users/arlo/Documents/Mis_Proyectos/42_cursus/Push_Swap/ps_list_utils.c || cmake_object_order_depends_target_Push_Swap
   DEP_FILE = CMakeFiles/Push_Swap.dir/ps_list_utils.c.o.d
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu99
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -std=gnu99
   OBJECT_DIR = CMakeFiles/Push_Swap.dir
   OBJECT_FILE_DIR = CMakeFiles/Push_Swap.dir
 
@@ -96,8 +96,8 @@ build CMakeFiles/Push_Swap.dir/ps_list_utils.c.o: C_COMPILER__Push_Swap_Debug /U
 #############################################
 # Link the executable Push_Swap
 
-build Push_Swap: C_EXECUTABLE_LINKER__Push_Swap_Debug CMakeFiles/Push_Swap.dir/main.c.o CMakeFiles/Push_Swap.dir/ps_checks_input.c.o CMakeFiles/Push_Swap.dir/ps_utils.c.o CMakeFiles/Push_Swap.dir/playing.c.o CMakeFiles/Push_Swap.dir/libft/ft_atoi.c.o CMakeFiles/Push_Swap.dir/libft/ft_isdigit.c.o CMakeFiles/Push_Swap.dir/ps_list_utils.c.o
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk
+build Push_Swap: C_EXECUTABLE_LINKER__Push_Swap_Debug CMakeFiles/Push_Swap.dir/main.c.o CMakeFiles/Push_Swap.dir/ps_checks_input.c.o CMakeFiles/Push_Swap.dir/ps_array_utils.c.o CMakeFiles/Push_Swap.dir/playing.c.o CMakeFiles/Push_Swap.dir/libft/ft_atoi.c.o CMakeFiles/Push_Swap.dir/libft/ft_isdigit.c.o CMakeFiles/Push_Swap.dir/ps_list_utils.c.o
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk
   OBJECT_DIR = CMakeFiles/Push_Swap.dir
   POST_BUILD = :
   PRE_LINK = :
