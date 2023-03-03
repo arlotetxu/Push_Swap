@@ -4,29 +4,13 @@
 #include "push_swap.h"
 
 /*
- * ps_ft_isdigit checks if all the input parameters are digits
+ * WRITING THE ERROR
  */
-//void	ps_ft_isdigit(char **argv)
-//{
-//	int	i;
-//	int	j;
-//
-//	i = 1;
-//	while (argv[i])
-//	{
-//		j = 0;
-//		while (argv[i][j])
-//		{
-//			if (ft_isdigit(argv[i][j]) == 0)
-//			{
-//				write(1, "Error(1)\n", 9);
-//				exit(2);
-//			}
-//			j++;
-//		}
-//		i++;
-//	}
-//}
+void	ft_error_exit(void)
+{
+	write(1, "Error\n", 6);
+	exit(2);
+}
 
 /*
  * ft_check_limits checks if each argument is within the INT range

@@ -37,6 +37,7 @@ int			ft_get_array_index(int nb, int argc, char **argv);
 //Function to operate lists
 void		ft_add_info_list(t_node **head_ref_a, int argc, char **argv);
 void		ft_print_list(t_node *head_ref);
+int			ft_list_sorted(t_node *head_ref);
 
 //Main function
 void		ft_push_swap(int argc, char **argv);

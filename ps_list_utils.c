@@ -1,16 +1,15 @@
 //
 // Created by Jose Manuel Florido Pereña on 20/2/23.
 //
-
 #include "push_swap.h"
 
 /*
  * ADDING THE VALUES TO THE LIST
- * Tras crear los dos stacks en main, añadir los valores de argv al campo
- * "nb" de la lista y el indice obtenido de la funcion
- *  ft_get_array_index(int nb, int argc, char **argv) en el campo "index"
+ *  After creating both stacks in the main file (ft_push_swap function)
+ *  the arguments are added to the field "nb" and the corresponding "index"
+ *  returned from the function "ft_get_array_index" after added to an int
+ *  array and sorted them.
  */
-
 void	ft_add_info_list(t_node **head_ref_a, int argc, char **argv)
 {
 	int		i;
@@ -38,14 +37,42 @@ void	ft_add_info_list(t_node **head_ref_a, int argc, char **argv)
 		}
 		i++;
 	}
+	//The following fucntion prints the list
 	ft_print_list(*head_ref_a);
+	//Checking if the list is sorted
+	printf("Sorted (1 -> NO // 0 -> YES): %d\n", ft_list_sorted(*head_ref_a));
 }
 
+/*
+ * PRINTING THE LIST
+ */
 void	ft_print_list(t_node *head_ref)
 {
 	while (head_ref->next != NULL)
+	//while (head_ref)
 	{
-		printf("Number: %d -- Index: %d\n", head_ref->nb, head_ref->index);
+		printf("Number: %d 	--- 	Index: %d\n", head_ref->nb, head_ref->index);
 		head_ref = head_ref->next;
 	}
+	printf("Number: %d 	--- 	Index: %d\n", head_ref->nb, head_ref->index);
+}
+
+/*
+ * CHECK IF THE LIST IS SORTED
+ * If the list is already sorted, the function returns 0,
+ * else, returns 1.
+ */
+int	ft_list_sorted(t_node *head_ref)
+{
+	int	i;
+
+	i = 0;
+	while (head_ref->next != NULL)
+	{
+		if (head_ref->index != i)
+			return (1);
+		head_ref = head_ref->next;
+		i++;
+	}
+	return (0);
 }

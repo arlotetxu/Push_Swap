@@ -5,15 +5,7 @@
 #include "push_swap.h"
 
 /*
- *
- */
-void	ft_error_exit(void)
-{
-	write(1, "Error\n", 6);
-	exit(2);
-}
-
-/*
+ * CONVERTING A NUMBER TO BINARY
  * ft_int2binary return the binary number of an integer number
  */
 char *ft_int2binary(int n)
@@ -45,8 +37,10 @@ char *ft_int2binary(int n)
 }
 
 /*
- * int	*ft_add_nb_array(int argc, char **argv) adds input numbers
- * to an int array "nb_arr"
+ * ADDING THE INPUT ARGUMENTS TO AN ARRAY OF INTEGERS
+ * adds input numbers to an int array "nb_arr".
+ * The function also calls the function "ft_sort_int_array"
+ * to sort the values within the array.
  */
 int	*ft_add_nb_array(int argc, char **argv)
 {
@@ -74,7 +68,9 @@ int	*ft_add_nb_array(int argc, char **argv)
 }
 
 /*
- *
+ * SORTING AN INT ARRAY
+ * The function receives an array of ints and the number of arguments
+ * in the input and sorts the values.
  */
 void	ft_sort_int_array(int *nbs, int argc)
 {
@@ -108,6 +104,7 @@ void	ft_sort_int_array(int *nbs, int argc)
 }
 
 /*
+ * GETTING THE INDEX OF A NUMBER IN AN INT ARRAY AFTER SORTED THE VALUES
  * ft_get_array_index(int nb, int argc, char **argv) duplicates the array
  * and return the index of the given number in the parameter "nb"
  */
