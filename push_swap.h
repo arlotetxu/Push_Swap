@@ -39,6 +39,9 @@ void		ft_add_info_list(t_node **head_ref_a, int argc, char **argv);
 void		ft_print_list(t_node *head_ref);
 int			ft_list_sorted(t_node *head_ref);
 
+//Movements
+void		ft_swap_a(t_node **head_ref_a);
+
 //Main function
 void		ft_push_swap(int argc, char **argv);
 

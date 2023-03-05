@@ -15,10 +15,10 @@ void	ft_push_swap(int argc, char **argv)
 {
 	int		i;
 	t_node	*stack_a;
-//	t_node	*stack_b;
+	//t_node	*stack_b;
 //
 	stack_a = NULL;
-//	stack_b = NULL;
+	//stack_b = NULL;
 	i = 1;
 	while (argv[i])
 	{

@@ -41,6 +41,7 @@ void	ft_add_info_list(t_node **head_ref_a, int argc, char **argv)
 	ft_print_list(*head_ref_a);
 	//Checking if the list is sorted
 	printf("Sorted (1 -> NO // 0 -> YES): %d\n", ft_list_sorted(*head_ref_a));
+	//ft_swap_a(head_ref_a);
 }
 
 /*
