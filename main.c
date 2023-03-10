@@ -41,7 +41,11 @@ void	ft_push_swap(int argc, char **argv)
 	//CHECKS
 	printf("DOING SA:\n");
 	ft_swap_a(&stack_a);
+	printf("List_A\n");
 	ft_print_list(stack_a);
+//	printf("List_B\n");
+//	ft_print_list(stack_b);
+	//----------------------------------
 	printf("DOING PB\n");
 	ft_push_b(&stack_a, &stack_b);
 	ft_push_b(&stack_a, &stack_b);
@@ -49,8 +53,30 @@ void	ft_push_swap(int argc, char **argv)
 	ft_print_list(stack_a);
 	printf("List_B\n");
 	ft_print_list(stack_b);
-	printf("DOING PA\n");
-	ft_push_a(&stack_a, &stack_b);
+	//----------------------------------
+//	printf("DOING PA\n");
+//	ft_push_a(&stack_a, &stack_b);
+//	printf("List_A\n");
+//	ft_print_list(stack_a);
+//	printf("List_B\n");
+//	ft_print_list(stack_b);
+	//----------------------------------
+	printf("DOING RA\n");
+	ft_rotate_a(&stack_a);
+	printf("List_A\n");
+	ft_print_list(stack_a);
+	printf("List_B\n");
+	ft_print_list(stack_b);
+	//----------------------------------
+	printf("DOING RB\n");
+	ft_rotate_b(&stack_b);
+	printf("List_A\n");
+	ft_print_list(stack_a);
+	printf("List_B\n");
+	ft_print_list(stack_b);
+	//----------------------------------
+	printf("DOING RAB\n");
+	ft_rotate_ab(&stack_a, &stack_b);
 	printf("List_A\n");
 	ft_print_list(stack_a);
 	printf("List_B\n");
