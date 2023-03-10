@@ -39,10 +39,17 @@ void		ft_add_info_list(t_node **head_ref_a, int argc, char **argv);
 void		ft_print_list(t_node *head_ref);
 int			ft_list_sorted(t_node *head_ref);
 
-//Movements
+//Movements swap (sa, sb, ss)
 void		ft_swap_a(t_node **head_ref_a);
+void		ft_swap_b(t_node **head_ref_b);
+void		ft_swap_a_b(t_node **head_ref_a, t_node **head_ref_b);
+
+//Movements push (pa, pb)
+void		ft_push_b(t_node **head_ref_a, t_node **head_ref_b);
+void		ft_push_a(t_node **head_ref_a, t_node **head_ref_b);
 
 //Main function
 void		ft_push_swap(int argc, char **argv);
+
 
 #endif //PUSH_SWAP_PUSH_SWAP_H

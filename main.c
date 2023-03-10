@@ -9,16 +9,24 @@
  * Error(5) --> ft_atoi cannot convert the input string in a number
  *
  * TBD
- * - No controlo si el numero no es entero
+ * - No controlo si el numero no es entero.
+ * - Movimientos de rotacion y rotacion invertida.
+ * - Saber cuantas veces iterar segun el valor mas alto del indice en binario.
+ *
+ * STATUS
+ * - Desarrolados los movimientos de swap y push.
+ * - Añadido chequeos en ft_push_swap para controlar que los movimientos se hacen
+ * correctamente. Acordarse de comentar.
+ *
  */
 void	ft_push_swap(int argc, char **argv)
 {
 	int		i;
 	t_node	*stack_a;
-	//t_node	*stack_b;
+	t_node	*stack_b;
 //
 	stack_a = NULL;
-	//stack_b = NULL;
+	stack_b = NULL;
 	i = 1;
 	while (argv[i])
 	{
@@ -30,6 +38,23 @@ void	ft_push_swap(int argc, char **argv)
 	ft_check_dupli(ft_add_nb_array(argc, argv), argc);
 	//Adding values to the stack_a
 	ft_add_info_list(&stack_a, argc, argv);
+	//CHECKS
+	printf("DOING SA:\n");
+	ft_swap_a(&stack_a);
+	ft_print_list(stack_a);
+	printf("DOING PB\n");
+	ft_push_b(&stack_a, &stack_b);
+	ft_push_b(&stack_a, &stack_b);
+	printf("List_A\n");
+	ft_print_list(stack_a);
+	printf("List_B\n");
+	ft_print_list(stack_b);
+	printf("DOING PA\n");
+	ft_push_a(&stack_a, &stack_b);
+	printf("List_A\n");
+	ft_print_list(stack_a);
+	printf("List_B\n");
+	ft_print_list(stack_b);
 }
 
 
