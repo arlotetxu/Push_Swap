@@ -96,6 +96,20 @@ void	ft_push_swap(int argc, char **argv)
 	ft_print_list(stack_a);
 	printf("List_B\n");
 	ft_print_list(stack_b);
+	printf("----------------------------\n");
+	printf("DOING RRB\n");
+	ft_rotate_r_b(&stack_b, 'b');
+	printf("List_A\n");
+	ft_print_list(stack_a);
+	printf("List_B\n");
+	ft_print_list(stack_b);
+	printf("----------------------------\n");
+	printf("DOING RRR\n");
+	ft_rotate_r_ab(&stack_a, &stack_b);
+	printf("List_A\n");
+	ft_print_list(stack_a);
+	printf("List_B\n");
+	ft_print_list(stack_b);
 }
 
 

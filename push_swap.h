@@ -55,6 +55,8 @@ void		ft_rotate_ab(t_node **head_ref_a, t_node **head_ref_b);
 
 //Movements rotate reversal (rra, rrb, rrr)
 void		ft_rotate_r_a(t_node **head_ref_a, char id);
+void		ft_rotate_r_b(t_node **head_ref_b, char id);
+void		ft_rotate_r_ab(t_node **head_ref_a, t_node **head_ref_b);
 
 //Main function
 void		ft_push_swap(int argc, char **argv);
