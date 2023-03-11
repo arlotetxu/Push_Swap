@@ -1,7 +1,7 @@
 # ninja log v5
 1	37	1677680871272882771	CMakeFiles/Push_Swap.dir/libft/ft_isdigit.c.o	16e89be60d6809e2
 1	40	1677769224967585765	CMakeFiles/Push_Swap.dir/ps_checks_input.c.o	cc267aa014f78d10
-0	49	1678457742808128992	build.ninja	8f7e8ca088bfdaca
+0	49	1678522176079149717	build.ninja	8f7e8ca088bfdaca
 0	40	1677769224967523765	CMakeFiles/Push_Swap.dir/main.c.o	d3ff4e6380729509
 2	74	1677836797159657981	CMakeFiles/Push_Swap.dir/ps_list_utils.c.o	70bbfe9099cdabd4
 1	39	1677680871275109683	CMakeFiles/Push_Swap.dir/libft/ft_atoi.c.o	6bab38d8c41c6a09

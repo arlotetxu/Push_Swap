@@ -40,19 +40,21 @@ void		ft_print_list(t_node *head_ref);
 int			ft_list_sorted(t_node *head_ref);
 
 //Movements swap (sa, sb, ss)
-void		ft_swap_a(t_node **head_ref_a);
-void		ft_swap_b(t_node **head_ref_b);
-void		ft_swap_a_b(t_node **head_ref_a, t_node **head_ref_b);
+void		ft_swap_a(t_node **head_ref_a, char id);
+void		ft_swap_b(t_node **head_ref_b, char id);
+void		ft_swap_ab(t_node **head_ref_a, t_node **head_ref_b);
 
 //Movements push (pa, pb)
 void		ft_push_b(t_node **head_ref_a, t_node **head_ref_b);
 void		ft_push_a(t_node **head_ref_a, t_node **head_ref_b);
 
 //Movements rotate (ra, rb, rr)
-void		ft_rotate_a(t_node **head_ref_a);
-void		ft_rotate_b(t_node **head_ref_b);
+void		ft_rotate_a(t_node **head_ref_a, char id);
+void		ft_rotate_b(t_node **head_ref_b, char id);
 void		ft_rotate_ab(t_node **head_ref_a, t_node **head_ref_b);
-void		ft_print_rotate();
+
+//Movements rotate reversal (rra, rrb, rrr)
+void		ft_rotate_r_a(t_node **head_ref_a, char id);
 
 //Main function
 void		ft_push_swap(int argc, char **argv);

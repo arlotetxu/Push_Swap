@@ -3,7 +3,7 @@
 //
 #include "push_swap.h"
 
-void	ft_rotate_a(t_node **head_ref_a)
+void	ft_rotate_a(t_node **head_ref_a, char id)
 {
 	t_node	*node;
 	t_node	*last;
@@ -18,11 +18,11 @@ void	ft_rotate_a(t_node **head_ref_a)
 		last = last->next;
 	last->next = node;
 	node->next = NULL;
-	//write(1, "ra\n", 3);
-	ft_print_rotate();
+	if (id == 'a')
+		write(1, "ra\n", 3);
 }
 
-void	ft_rotate_b(t_node **head_ref_b)
+void	ft_rotate_b(t_node **head_ref_b, char id)
 {
 	t_node	*node;
 	t_node	*last;
@@ -37,27 +37,14 @@ void	ft_rotate_b(t_node **head_ref_b)
 		last = last->next;
 	last->next = node;
 	node->next = NULL;
-	//write(1, "rb\n", 3);
-	ft_print_rotate();
+	if (id == 'b')
+		write(1, "rb\n", 3);
 }
 
 void	ft_rotate_ab(t_node **head_ref_a, t_node **head_ref_b)
 {
-	ft_rotate_a(head_ref_a);
-	ft_rotate_b(head_ref_b);
-	ft_print_rotate();
-}
-
-void	ft_print_rotate()
-{
-//	const char	*func;
-//
-//	func = __func__ ;
-	printf("la funcion %s Invoca: %s\n", __func__, __FUNCTION__);
-//	if (func == "ft_rotate_a")
-//		write(1, "ra\n", 3);
-//	if (func == "ft_rotate_b")
-//		write(1, "rb\n", 3);
-//	if (func == "ft_rotate_ab")
-//		write(1, "rr\n", 3);
+	//'N' as parameter means the previous functions will not print the movement
+	ft_rotate_a(head_ref_a, 'N');
+	ft_rotate_b(head_ref_b, 'N');
+	write(1, "rr\n", 3);
 }
