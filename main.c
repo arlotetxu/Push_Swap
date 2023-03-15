@@ -41,6 +41,9 @@ void	ft_push_swap(int argc, char **argv)
 	ft_check_dupli(ft_add_nb_array(argc, argv), argc);
 	//Adding values to the stack_a
 	ft_add_info_list(&stack_a, argc, argv);
+	// Check if the list is already sorted
+	if (ft_list_sorted(stack_a) == 0)
+		return ;
 	//ft_max_index_binary(&stack_a);
 	ft_sort_radix(&stack_a, &stack_b);
 	//CHECKS

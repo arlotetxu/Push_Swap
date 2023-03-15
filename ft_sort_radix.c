@@ -34,9 +34,10 @@ void	ft_sort_radix(t_node **head_ref_a, t_node **head_ref_b)
 		while (ft_num_nodes(*head_ref_b) != 0)
 			ft_push_a(head_ref_a, head_ref_b);
 		ft_push_a(head_ref_a, head_ref_b);
+		if (ft_list_sorted(*head_ref_a) == 0)
+			break;
 		i++;
 	}
-
 	printf("LIST-A\n");
 	ft_print_list(*head_ref_a);
 //	printf("LIST-B\n");
