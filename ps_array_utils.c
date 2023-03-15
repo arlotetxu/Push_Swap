@@ -8,12 +8,13 @@
  * CONVERTING A NUMBER TO BINARY
  * ft_int2binary return the binary number of an integer number
  */
-char *ft_int2binary(int n)
+char	*ft_int2binary(int n)
 {
 	int		nbinary[32];
 	char	*nbinary_s;
 	int 	i;
 	int		j;
+	//int 	aux = n;
 
 	i = 0;
 	while (n > 0)
@@ -26,14 +27,33 @@ char *ft_int2binary(int n)
 	if (!nbinary_s)
 		return (NULL);
 	j = 0;
-	while(i > 0)
+	while (i > 0)
 	{
 		nbinary_s[j] = nbinary[i - 1] + '0';
 		i--;
 		j++;
 	}
 	nbinary_s[j] = '\0';
+	//printf("Binario de %d: %s\n", aux, nbinary_s);
 	return (nbinary_s);
+}
+
+/*
+ * COUNT THE NUMBER OF CHARS IN A STRING
+ * I do it to know later on how many times the logical
+ * function should iterates.
+ * See ft_max_index_binary
+ */
+int	ft_count_char(char *str)
+{
+	int i;
+	int count;
+
+	i = 0;
+	count = 0;
+	while (str[i++])
+		count = count + 1;
+	return (count);
 }
 
 /*
@@ -44,8 +64,8 @@ char *ft_int2binary(int n)
  */
 int	*ft_add_nb_array(int argc, char **argv)
 {
-	int *nb_arr;
-	int i;
+	int	*nb_arr;
+	int	i;
 
 	nb_arr = malloc(sizeof (int) * (argc - 1));//TODO Ojo hacer "free" antes de finalizar programa
 	if (!nb_arr)

@@ -30,6 +30,7 @@ void		ft_error_exit(void);
 
 //Function to operate int array
 char 		*ft_int2binary(int n);
+int			ft_count_char(char *str);
 int			*ft_add_nb_array(int argc, char **argv);
 void		ft_sort_int_array(int *nbs, int argc);
 int			ft_get_array_index(int nb, int argc, char **argv);
@@ -38,6 +39,8 @@ int			ft_get_array_index(int nb, int argc, char **argv);
 void		ft_add_info_list(t_node **head_ref_a, int argc, char **argv);
 void		ft_print_list(t_node *head_ref);
 int			ft_list_sorted(t_node *head_ref);
+int			ft_max_index_binary(t_node **head_ref_a);
+int			ft_num_nodes(t_node *head_ref);
 
 //Movements swap (sa, sb, ss)
 void		ft_swap_a(t_node **head_ref_a, char id);
@@ -57,6 +60,10 @@ void		ft_rotate_ab(t_node **head_ref_a, t_node **head_ref_b);
 void		ft_rotate_r_a(t_node **head_ref_a, char id);
 void		ft_rotate_r_b(t_node **head_ref_b, char id);
 void		ft_rotate_r_ab(t_node **head_ref_a, t_node **head_ref_b);
+
+//sorting the list
+//void		ft_sort_more_5(t_node **head_ref_a, t_node **head_ref_b);
+void	ft_sort_radix(t_node **head_ref_a, t_node **head_ref_b);
 
 //Main function
 void		ft_push_swap(int argc, char **argv);

@@ -77,3 +77,52 @@ int	ft_list_sorted(t_node *head_ref)
 	}
 	return (0);
 }
+
+/*
+ * GETTING THE MAXIMUM CHARS IN BINARY FROM INDEX
+ * This function calculates the maximum chars converting the
+ * index of each node in binary. This number will be used to know
+ * how many times the logical function should iterates.
+ */
+int	ft_max_index_binary(t_node **head_ref_a)
+{
+	t_node	*last;
+	int		max;
+	char	*binary;
+	int		char_bin;
+
+	max = 0;
+	last = (*head_ref_a);
+	while (last->next != NULL)
+	{
+		if (last->index == 0)
+			last = last->next;
+		binary = ft_int2binary(last->index);
+		char_bin = ft_count_char(binary);
+		if (char_bin > max)
+			max = char_bin;
+		last = last->next;
+	}
+	if (ft_count_char(ft_int2binary(last->index)) > max)
+		max = ft_count_char(ft_int2binary(last->index));
+	//printf("Maximo de binario: %d\n", max);
+	return (max);
+}
+
+/*
+ * GETTING THE NUMBER OF NODES IN A LIST
+ */
+int	ft_num_nodes(t_node *head_ref)
+{
+	int	count;
+
+	if (!head_ref)
+		return (0);
+	count = 0;
+	while (head_ref->next != NULL)
+	{
+		head_ref = head_ref->next;
+		count++;
+	}
+	return (count);
+}
