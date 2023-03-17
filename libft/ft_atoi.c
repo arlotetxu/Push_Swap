@@ -105,5 +105,10 @@ long long	ft_atoi(const char *str)
 		n = n * 10 + (str[i] - '0');
 		i++;
 	}
+	if (str[i] != '\0' && (str[i] < 48 || str[i] > 57))
+	{
+		write(1, "Error(5)\n", 9);
+		exit(2);
+	}
 	return (n * sign);
 }

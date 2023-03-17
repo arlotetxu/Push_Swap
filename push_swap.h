@@ -1,6 +1,14 @@
-//
-// Created by Jose Manuel Florido Pereña on 30/1/23.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jflorido <jflorido@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/03/17 09:43:27 by jflorido          #+#    #+#             */
+/*   Updated: 2023/03/17 09:43:30 by jflorido         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #ifndef PUSH_SWAP_PUSH_SWAP_H
 #define PUSH_SWAP_PUSH_SWAP_H
@@ -62,8 +70,9 @@ void		ft_rotate_r_b(t_node **head_ref_b, char id);
 void		ft_rotate_r_ab(t_node **head_ref_a, t_node **head_ref_b);
 
 //sorting the list
-//void		ft_sort_more_5(t_node **head_ref_a, t_node **head_ref_b);
-void	ft_sort_radix(t_node **head_ref_a, t_node **head_ref_b);
+//int			ft_list_max(t_node **head_ref_a);
+void		ft_sort_3(t_node **head_ref_a);
+void		ft_sort_radix(t_node **head_ref_a, t_node **head_ref_b);
 
 //Main function
 void		ft_push_swap(int argc, char **argv);

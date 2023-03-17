@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jflorido <jflorido@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/03/17 09:41:32 by jflorido          #+#    #+#             */
+/*   Updated: 2023/03/17 09:41:35 by jflorido         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "push_swap.h"
 
@@ -9,17 +20,18 @@
  * Error(5) --> ft_atoi cannot convert the input string in a number
  *
  * TBD
- * - No controlo si el numero no es entero.
- * - Movimientos de rotacion invertida. OK
- * - Saber cuantas veces iterar segun el valor mas alto del indice en binario. OK (ft_max_index_binary)
- * - Desarrollar logica para mas de 5 argumentos. ONGOING
  * - Desarrollar logica para 3 argumentos
  * - Desarrollar logica para 5 argumentos
  *
  * STATUS
+ * - Finalizado Control de entrada.
+ * 		- No controlo si el numero no es entero. OK (controlado con la funcion atoi)
+ * 		- No puede haber inputs del tipo 25abc (modificar atoi). OK
  * - Desarrolados los movimientos.
  * - Añadido chequeos en ft_push_swap para controlar que los movimientos se hacen
  * correctamente. Acordarse de comentar.
+ * - Desarrollada logica para mas de 5 argumentos. ft_sort_radix
+
  *
  */
 void	ft_push_swap(int argc, char **argv)
@@ -45,7 +57,10 @@ void	ft_push_swap(int argc, char **argv)
 	if (ft_list_sorted(stack_a) == 0)
 		return ;
 	//ft_max_index_binary(&stack_a);
-	ft_sort_radix(&stack_a, &stack_b);
+	ft_sort_3(&stack_a);
+	printf("List_A\n");
+	ft_print_list(stack_a);
+	//ft_sort_radix(&stack_a, &stack_b);
 	//CHECKS
 //	printf("----------------------------\n");
 //	printf("DOING SA:\n");
