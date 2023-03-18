@@ -23,11 +23,18 @@
 //	return (max);
 //}
 
+void	ft_sort_2(t_node **head_ref_a)
+{
+	if (ft_list_sorted(*head_ref_a) == 0)
+		return ;
+	ft_swap_a(head_ref_a, 'a');
+}
+
 
 void	ft_sort_3(t_node **head_ref_a)
 {
 	if (ft_list_sorted(*head_ref_a) == 0)
-		return;
+		return ;
 	if ((*head_ref_a)->nb > (*head_ref_a)->next->nb)
 	{
 		if ((*head_ref_a)->next->nb > (*head_ref_a)->next ->next->nb)
@@ -36,7 +43,10 @@ void	ft_sort_3(t_node **head_ref_a)
 			ft_rotate_r_a(head_ref_a, 'a');
 		}
 		else
+		{
 			ft_rotate_a(head_ref_a, 'a');
+			ft_sort_3(head_ref_a);
+		}
 	}
 	else
 	{

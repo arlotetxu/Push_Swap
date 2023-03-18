@@ -6,7 +6,7 @@
 /*   By: jflorido <jflorido@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 09:41:09 by jflorido          #+#    #+#             */
-/*   Updated: 2023/03/17 09:41:18 by jflorido         ###   ########.fr       */
+/*   Updated: 2023/03/18 08:58:15 by arlo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,13 @@ void	ft_sort_radix(t_node **head_ref_a, t_node **head_ref_b)
 {
 	int		iter;
 	int		i;
-	int 	nodes;
+	int		nodes;
 	t_node	*last;
 
 	iter = ft_max_index_binary(head_ref_a);
 	//printf("Iter: %d\n", iter);
 	i = 0;
 	last = (*head_ref_a);
-
 	while (i < iter)
 	{
 		nodes = ft_num_nodes(*head_ref_a);
@@ -46,8 +45,8 @@ void	ft_sort_radix(t_node **head_ref_a, t_node **head_ref_b)
 			break;
 		i++;
 	}
-	printf("LIST-A\n");
-	ft_print_list(*head_ref_a);
+//	printf("LIST-A\n");
+//	ft_print_list(*head_ref_a);
 //	printf("LIST-B\n");
 //	ft_print_list(*head_ref_b);
 }

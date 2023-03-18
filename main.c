@@ -6,7 +6,7 @@
 /*   By: jflorido <jflorido@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 09:41:32 by jflorido          #+#    #+#             */
-/*   Updated: 2023/03/17 09:41:35 by jflorido         ###   ########.fr       */
+/*   Updated: 2023/03/18 08:54:10 by arlo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void	ft_push_swap(int argc, char **argv)
 	int		i;
 	t_node	*stack_a;
 	t_node	*stack_b;
-//
+
 	stack_a = NULL;
 	stack_b = NULL;
 	i = 1;
@@ -57,10 +57,18 @@ void	ft_push_swap(int argc, char **argv)
 	if (ft_list_sorted(stack_a) == 0)
 		return ;
 	//ft_max_index_binary(&stack_a);
-	ft_sort_3(&stack_a);
+//	ft_sort_3(&stack_a);
+//	printf("List_A\n");
+//	ft_print_list(stack_a);
+//	ft_sort_radix(&stack_a, &stack_b);
+	if (argc == 3)
+		ft_sort_2(&stack_a);
+	else if (argc == 4)
+		ft_sort_3(&stack_a);
+	else if (argc > 6)
+		ft_sort_radix(&stack_a, &stack_b);
 	printf("List_A\n");
 	ft_print_list(stack_a);
-	//ft_sort_radix(&stack_a, &stack_b);
 	//CHECKS
 //	printf("----------------------------\n");
 //	printf("DOING SA:\n");

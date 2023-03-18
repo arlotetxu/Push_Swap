@@ -71,6 +71,7 @@ void		ft_rotate_r_ab(t_node **head_ref_a, t_node **head_ref_b);
 
 //sorting the list
 //int			ft_list_max(t_node **head_ref_a);
+void		ft_sort_2(t_node **head_ref_a);
 void		ft_sort_3(t_node **head_ref_a);
 void		ft_sort_radix(t_node **head_ref_a, t_node **head_ref_b);
 
