@@ -31,7 +31,7 @@ char	*ft_int2binary(int n)
 		n = n / 2;
 		i++;
 	}
-	nbinary_s = malloc(sizeof(char) * i);
+	nbinary_s = malloc(sizeof(char) * i); //TODO liberar esta memoria??
 	if (!nbinary_s)
 		return (NULL);
 	j = 0;

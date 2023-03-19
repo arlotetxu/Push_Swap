@@ -6,7 +6,7 @@
 /*   By: jflorido <jflorido@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 09:42:21 by jflorido          #+#    #+#             */
-/*   Updated: 2023/03/17 09:42:25 by jflorido         ###   ########.fr       */
+/*   Updated: 2023/03/19 12:49:15 by arlo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	ft_add_info_list(t_node **head_ref_a, int argc, char **argv)
 		new_node->index = ft_get_array_index(new_node->nb, argc, argv);
 		new_node->next = NULL;
 		//Check if the list is empty
-		if(*head_ref_a == NULL)
+		if (*head_ref_a == NULL)
 			*head_ref_a = new_node;
 		//If the list is not empty, we must go through it
 		else
@@ -46,11 +46,10 @@ void	ft_add_info_list(t_node **head_ref_a, int argc, char **argv)
 		}
 		i++;
 	}
-	//The following fucntion prints the list
-	ft_print_list(*head_ref_a);
+	//The following function prints the list
+	//ft_print_list(*head_ref_a);
 	//Checking if the list is sorted
-	printf("Sorted (1 -> NO // 0 -> YES): %d\n", ft_list_sorted(*head_ref_a));
-	//ft_swap_a(head_ref_a);
+	//printf("Sorted (1 -> NO // 0 -> YES): %d\n", ft_list_sorted(*head_ref_a, ft_list_min(head_ref_a)));
 }
 
 /*
@@ -59,7 +58,6 @@ void	ft_add_info_list(t_node **head_ref_a, int argc, char **argv)
 void	ft_print_list(t_node *head_ref)
 {
 	while (head_ref->next != NULL)
-	//while (head_ref)
 	{
 		printf("Number: %d 	--- 	Index: %d\n", head_ref->nb, head_ref->index);
 		head_ref = head_ref->next;
@@ -72,11 +70,11 @@ void	ft_print_list(t_node *head_ref)
  * If the list is already sorted, the function returns 0,
  * else, returns 1.
  */
-int	ft_list_sorted(t_node *head_ref)
+int	ft_list_sorted(t_node *head_ref, int min_index)
 {
 	int	i;
 
-	i = 0;
+	i = min_index;
 	while (head_ref->next != NULL)
 	{
 		if (head_ref->index != i)
@@ -104,8 +102,8 @@ int	ft_max_index_binary(t_node **head_ref_a)
 	last = (*head_ref_a);
 	while (last->next != NULL)
 	{
-		if (last->index == 0)
-			last = last->next;
+//		if (last->index == 0)
+//			last = last->next;
 		binary = ft_int2binary(last->index);
 		char_bin = ft_count_char(binary);
 		if (char_bin > max)
@@ -114,7 +112,6 @@ int	ft_max_index_binary(t_node **head_ref_a)
 	}
 	if (ft_count_char(ft_int2binary(last->index)) > max)
 		max = ft_count_char(ft_int2binary(last->index));
-	//printf("Maximo de binario: %d\n", max);
 	return (max);
 }
 

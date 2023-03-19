@@ -6,7 +6,7 @@
 /*   By: jflorido <jflorido@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 09:43:27 by jflorido          #+#    #+#             */
-/*   Updated: 2023/03/18 19:31:58 by arlo             ###   ########.fr       */
+/*   Updated: 2023/03/19 11:16:18 by arlo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,11 @@ typedef struct n_list
 
 //Function to control the input
 int			ft_check_limits(char *str_nb);
-//void		ps_ft_isdigit(char **argv);
 void		ft_check_dupli(int *nb_array, int argc);
 void		ft_error_exit(void);
 
 //Function to operate int array
-char 		*ft_int2binary(int n);
+char		*ft_int2binary(int n);
 int			ft_count_char(char *str);
 int			*ft_add_nb_array(int argc, char **argv);
 void		ft_sort_int_array(int *nbs, int argc);
@@ -46,7 +45,7 @@ int			ft_get_array_index(int nb, int argc, char **argv);
 //Function to operate lists
 void		ft_add_info_list(t_node **head_ref_a, int argc, char **argv);
 void		ft_print_list(t_node *head_ref);
-int			ft_list_sorted(t_node *head_ref);
+int			ft_list_sorted(t_node *head_ref, int min_index);
 int			ft_max_index_binary(t_node **head_ref_a);
 int			ft_num_nodes(t_node *head_ref);
 
@@ -73,7 +72,6 @@ void		ft_rotate_r_ab(t_node **head_ref_a, t_node **head_ref_b);
 int			ft_list_min(t_node **head_ref_a);
 void		ft_sort_2(t_node **head_ref_a);
 void		ft_sort_3(t_node **head_ref_a);
-//void		ft_sort_3(t_node **head_ref_a, t_node **head_ref_b);
 void		ft_sort_5(t_node **head_ref_a, t_node **head_ref_b);
 void		ft_sort_radix(t_node **head_ref_a, t_node **head_ref_b);
 
