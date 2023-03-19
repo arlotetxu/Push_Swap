@@ -6,7 +6,7 @@
 /*   By: jflorido <jflorido@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 09:41:32 by jflorido          #+#    #+#             */
-/*   Updated: 2023/03/18 08:54:10 by arlo             ###   ########.fr       */
+/*   Updated: 2023/03/19 10:26:46 by arlo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,12 @@
  *
  * TBD
  * - Desarrollar logica para 3 argumentos
+ * 		- Cambiar la funcion int	ft_list_min(t_node **head_ref_a) para que saque el minimo indice
+ * 		en lugar de el minimo valor.
+ * 		- Con lo anterior, cambiar la funcion int	ft_list_sorted(t_node *head_ref) añadiendo como
+ * 		argumento el indice minimo calculado en la funcion anterior y dandole ese valor a la variable i.
+ * 		- Añadir esta comprobacion en las funciones de ordenamiento para saber si la lista ya esta
+ * 		ordenada.
  * - Desarrollar logica para 5 argumentos
  *
  * STATUS
@@ -56,15 +62,13 @@ void	ft_push_swap(int argc, char **argv)
 	// Check if the list is already sorted
 	if (ft_list_sorted(stack_a) == 0)
 		return ;
-	//ft_max_index_binary(&stack_a);
-//	ft_sort_3(&stack_a);
-//	printf("List_A\n");
-//	ft_print_list(stack_a);
-//	ft_sort_radix(&stack_a, &stack_b);
 	if (argc == 3)
 		ft_sort_2(&stack_a);
 	else if (argc == 4)
+		//ft_sort_3(&stack_a);
 		ft_sort_3(&stack_a);
+	else if (argc == 6)
+		ft_sort_5(&stack_a, &stack_b);
 	else if (argc > 6)
 		ft_sort_radix(&stack_a, &stack_b);
 	printf("List_A\n");

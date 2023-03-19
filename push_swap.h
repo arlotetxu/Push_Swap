@@ -6,7 +6,7 @@
 /*   By: jflorido <jflorido@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 09:43:27 by jflorido          #+#    #+#             */
-/*   Updated: 2023/03/17 09:43:30 by jflorido         ###   ########.fr       */
+/*   Updated: 2023/03/18 19:31:58 by arlo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,9 +70,11 @@ void		ft_rotate_r_b(t_node **head_ref_b, char id);
 void		ft_rotate_r_ab(t_node **head_ref_a, t_node **head_ref_b);
 
 //sorting the list
-//int			ft_list_max(t_node **head_ref_a);
+int			ft_list_min(t_node **head_ref_a);
 void		ft_sort_2(t_node **head_ref_a);
 void		ft_sort_3(t_node **head_ref_a);
+//void		ft_sort_3(t_node **head_ref_a, t_node **head_ref_b);
+void		ft_sort_5(t_node **head_ref_a, t_node **head_ref_b);
 void		ft_sort_radix(t_node **head_ref_a, t_node **head_ref_b);
 
 //Main function
