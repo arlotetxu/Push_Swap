@@ -6,7 +6,7 @@
 /*   By: jflorido <jflorido@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 09:41:32 by jflorido          #+#    #+#             */
-/*   Updated: 2023/03/19 12:51:02 by arlo             ###   ########.fr       */
+/*   Updated: 2023/03/24 12:15:49 by arlo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,10 @@ void	ft_push_swap(int argc, char **argv)
 	ft_add_info_list(&stack_a, argc, argv);
 	// Check if the list is already sorted
 	if (ft_list_sorted(stack_a, ft_list_min(&stack_a)) == 0)
+	{
+		free(stack_a);
 		return ;
+	}
 	if (argc == 3)
 		ft_sort_2(&stack_a);
 	else if (argc == 4)

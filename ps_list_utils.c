@@ -6,7 +6,7 @@
 /*   By: jflorido <jflorido@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 09:42:21 by jflorido          #+#    #+#             */
-/*   Updated: 2023/03/19 12:49:15 by arlo             ###   ########.fr       */
+/*   Updated: 2023/03/24 12:46:21 by arlo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
  * ADDING THE VALUES TO THE LIST
  *  After creating both stacks in the main file (ft_push_swap function)
  *  the arguments are added to the field "nb" and the corresponding "index"
- *  returned from the function "ft_get_array_index" after added to an int
+ *  returned from the function "ft_get_array_index" after adding it to an int
  *  array and sorted them.
  */
 void	ft_add_info_list(t_node **head_ref_a, int argc, char **argv)
@@ -46,10 +46,6 @@ void	ft_add_info_list(t_node **head_ref_a, int argc, char **argv)
 		}
 		i++;
 	}
-	//The following function prints the list
-	//ft_print_list(*head_ref_a);
-	//Checking if the list is sorted
-	//printf("Sorted (1 -> NO // 0 -> YES): %d\n", ft_list_sorted(*head_ref_a, ft_list_min(head_ref_a)));
 }
 
 /*
@@ -100,10 +96,11 @@ int	ft_max_index_binary(t_node **head_ref_a)
 
 	max = 0;
 	last = (*head_ref_a);
+	binary = malloc(sizeof (int)); //TODO chequear este malloc. No convencido
+	if (binary == NULL)
+		return (0);
 	while (last->next != NULL)
 	{
-//		if (last->index == 0)
-//			last = last->next;
 		binary = ft_int2binary(last->index);
 		char_bin = ft_count_char(binary);
 		if (char_bin > max)
@@ -112,6 +109,7 @@ int	ft_max_index_binary(t_node **head_ref_a)
 	}
 	if (ft_count_char(ft_int2binary(last->index)) > max)
 		max = ft_count_char(ft_int2binary(last->index));
+	free(binary); //TODO checking the free
 	return (max);
 }
 

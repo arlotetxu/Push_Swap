@@ -6,7 +6,7 @@
 /*   By: jflorido <jflorido@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 17:06:18 by jflorido          #+#    #+#             */
-/*   Updated: 2023/03/18 08:33:02 by arlo             ###   ########.fr       */
+/*   Updated: 2023/03/24 11:57:13 by arlo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@
 */
 
 #include "libft.h"
+#include "../push_swap.h"
 
 static int	ft_checksign(const char *str)
 {
@@ -96,19 +97,13 @@ long long	ft_atoi(const char *str)
 	}	
 	n = 0;
 	if (str[i] < 48 || str[i] > 57)
-	{
-		write(1, "Error(5)\n", 9);
-		exit(2);
-	}
+		ft_error_exit();
 	while (str[i] != '\0' && (str[i] >= 48 && str[i] <= 57))
 	{
 		n = n * 10 + (str[i] - '0');
 		i++;
 	}
 	if (str[i] != '\0' && (str[i] < 48 || str[i] > 57))
-	{
-		write(1, "Error(5)\n", 9);
-		exit(2);
-	}
+		ft_error_exit();
 	return (n * sign);
 }

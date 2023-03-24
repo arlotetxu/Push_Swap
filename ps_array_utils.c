@@ -6,7 +6,7 @@
 /*   By: jflorido <jflorido@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 09:41:54 by jflorido          #+#    #+#             */
-/*   Updated: 2023/03/17 09:41:57 by jflorido         ###   ########.fr       */
+/*   Updated: 2023/03/24 16:07:09 by arlo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,8 @@ char	*ft_int2binary(int n)
 {
 	int		nbinary[32];
 	char	*nbinary_s;
-	int 	i;
+	int		i;
 	int		j;
-	//int 	aux = n;
 
 	i = 0;
 	while (n > 0)
@@ -42,20 +41,19 @@ char	*ft_int2binary(int n)
 		j++;
 	}
 	nbinary_s[j] = '\0';
-	//printf("Binario de %d: %s\n", aux, nbinary_s);
 	return (nbinary_s);
 }
 
 /*
  * COUNT THE NUMBER OF CHARS IN A STRING
  * I do it to know later on how many times the logical
- * function should iterates.
+ * function should iterate.
  * See ft_max_index_binary
  */
 int	ft_count_char(char *str)
 {
-	int i;
-	int count;
+	int	i;
+	int	count;
 
 	i = 0;
 	count = 0;
@@ -75,7 +73,7 @@ int	*ft_add_nb_array(int argc, char **argv)
 	int	*nb_arr;
 	int	i;
 
-	nb_arr = malloc(sizeof (int) * (argc - 1));//TODO Ojo hacer "free" antes de finalizar programa
+	nb_arr = malloc(sizeof (int) * (argc - 1)); //TODO Donde liberar este malloc?
 	if (!nb_arr)
 		return (0);
 	i = 0;
@@ -84,13 +82,6 @@ int	*ft_add_nb_array(int argc, char **argv)
 		nb_arr[i] = ft_atoi(argv[i + 1]);
 		i++;
 	}
-//	// Checking whether the values have been properly added
-//	i = 0;
-//	while (nb_arr[i])
-//	{
-//		printf("Valor %d en funcion: %d\n", i, nb_arr[i]);
-//		i++;
-//	}
 	ft_sort_int_array(nb_arr, argc);
 	return (nb_arr);
 }
@@ -122,13 +113,6 @@ void	ft_sort_int_array(int *nbs, int argc)
 		}
 		i++;
 	}
-	//Checking the order
-//	i = 0;
-//	while (i < argc - 1)
-//	{
-//		printf("Index %d: %d\n", i, nbs[i]);
-//		i++;
-//	}
 }
 
 /*
@@ -139,17 +123,14 @@ void	ft_sort_int_array(int *nbs, int argc)
 int	ft_get_array_index(int nb, int argc, char **argv)
 {
 	int	i;
-	int	*nb_array;
+	int	*nb_array; //TODO hacer malloc?
 
 	nb_array = ft_add_nb_array(argc, argv);
 	i = 0;
 	while (i < argc - 1)
 	{
 		if (nb == nb_array[i])
-		{
-			//printf("Index of %d: %d\n", nb, i);
 			return (i);
-		}
 		i++;
 	}
 	return (0);

@@ -6,7 +6,7 @@
 /*   By: jflorido <jflorido@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 09:42:09 by jflorido          #+#    #+#             */
-/*   Updated: 2023/03/18 08:33:02 by arlo             ###   ########.fr       */
+/*   Updated: 2023/03/24 11:28:59 by arlo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ void	ft_error_exit(void)
 }
 
 /*
+ * CHECKING THE INPUT LIMITS (INT)
  * ft_check_limits checks if each argument is within the INT range
  * ft_atoi has been modified in order to check if the parameters contains
  * numbers.
@@ -32,10 +33,7 @@ int	ft_check_limits(char *str_nb)
 
 	nb = ft_atoi(str_nb);
 	if (nb < -2147483648 || nb > 2147483647)
-	{
-		write(1, "Error(2)\n", 9);
-		exit(1);
-	}
+		ft_error_exit();
 	return (nb);
 }
 
@@ -57,8 +55,8 @@ void	ft_check_dupli(int *nb_array, int argc)
 		{
 			if (nb_array[j] == nb_array[i])
 			{
-				write(1, "Error(4)\n", 9);
-				exit(2);
+				free(nb_array);
+				ft_error_exit();
 			}
 			j++;
 		}
