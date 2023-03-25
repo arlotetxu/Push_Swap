@@ -6,19 +6,41 @@
 /*   By: jflorido <jflorido@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 09:42:09 by jflorido          #+#    #+#             */
-/*   Updated: 2023/03/24 11:28:59 by arlo             ###   ########.fr       */
+/*   Updated: 2023/03/25 12:11:39 by arlo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 /*
- * WRITING THE ERROR
+ * EXITING WHEN ERROR
  */
 void	ft_error_exit(void)
 {
 	write(1, "Error\n", 6);
 	exit(2);
+}
+
+/*
+ * EXITING WHEN SUCCESS
+ */
+void	ft_success_exit(t_node *head_ref_a, t_node *head_ref_b)
+{
+	t_node	*aux;
+
+	while (head_ref_a)
+	{
+		aux = head_ref_a;
+		head_ref_a = head_ref_a->next;
+		free(aux);
+	}
+	while (head_ref_b)
+	{
+		aux = head_ref_b;
+		head_ref_b = head_ref_b->next;
+		free(aux);
+	}
+	exit(0);
 }
 
 /*
@@ -38,6 +60,7 @@ int	ft_check_limits(char *str_nb)
 }
 
 /*
+ * CHECKING DUPLICATES IN INPUT
  * ft_check_dupli checks if any input number parameter is duplicated.
  * It receives as an argument an int array previously created with the function
  * ft_add_nb_array(int argc, char **argv) whithin the file ps_utils.c

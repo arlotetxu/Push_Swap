@@ -6,33 +6,12 @@
 /*   By: jflorido <jflorido@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 09:41:32 by jflorido          #+#    #+#             */
-/*   Updated: 2023/03/24 12:15:49 by arlo             ###   ########.fr       */
+/*   Updated: 2023/03/25 12:12:17 by arlo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-/*
- * Error Control:
- * Error(1) --> Error in function ps_ft_isdigit(char **argv) / some input is not a digit
- * Error(2) --> Error in function ft_check_limits(argv[i++]) / nb exceeds the integer limits
- * Error(4) --> Error in function ft_check_dupli(ft_add_nb_array(argc, argv)) / nb duplicated
- * Error(5) --> ft_atoi cannot convert the input string in a number
- *
- * TBD
- * - Añadir cabeceras a todos los archivos
- * - Comprobar memory leaks
- *
- * STATUS
- * - Finalizado Control de entrada.
- * 		- No controlo si el numero no es entero. OK (controlado con la funcion atoi)
- * 		- No puede haber inputs del tipo 25abc (modificar atoi). OK
- * - Desarrolados los movimientos.
- * - Añadido chequeos en ft_push_swap para controlar que los movimientos se hacen
- * correctamente. Acordarse de comentar.
- * - Desarrollada logica para mas de 5 argumentos. ft_sort_radix
- * - Desarrollada logica para 2, 3 y 5 argumentos.
- */
 void	ft_push_swap(int argc, char **argv)
 {
 	int		i;
@@ -54,10 +33,7 @@ void	ft_push_swap(int argc, char **argv)
 	ft_add_info_list(&stack_a, argc, argv);
 	// Check if the list is already sorted
 	if (ft_list_sorted(stack_a, ft_list_min(&stack_a)) == 0)
-	{
-		free(stack_a);
-		return ;
-	}
+		ft_success_exit(stack_a, stack_b);
 	if (argc == 3)
 		ft_sort_2(&stack_a);
 	else if (argc == 4)
@@ -68,76 +44,7 @@ void	ft_push_swap(int argc, char **argv)
 		ft_sort_radix(&stack_a, &stack_b);
 	printf("List_A\n");
 	ft_print_list(stack_a);
-	//CHECKS
-//	printf("----------------------------\n");
-//	printf("DOING SA:\n");
-//	ft_swap_a(&stack_a, 'a');
-//	printf("List_A\n");
-//	ft_print_list(stack_a);
-////	printf("List_B\n");
-////	ft_print_list(stack_b);
-//	//----------------------------------
-//	printf("----------------------------\n");
-//	printf("DOING PB\n");
-//	ft_push_b(&stack_a, &stack_b);
-//	ft_push_b(&stack_a, &stack_b);
-//	printf("List_A\n");
-//	ft_print_list(stack_a);
-//	printf("List_B\n");
-//	ft_print_list(stack_b);
-//	//----------------------------------
-//	printf("----------------------------\n");
-//	printf("DOING RA\n");
-//	ft_rotate_a(&stack_a, 'a');
-//	printf("List_A\n");
-//	ft_print_list(stack_a);
-//	printf("List_B\n");
-//	ft_print_list(stack_b);
-//	//----------------------------------
-//	printf("----------------------------\n");
-//	printf("DOING RB\n");
-//	ft_rotate_b(&stack_b, 'b');
-//	printf("List_A\n");
-//	ft_print_list(stack_a);
-//	printf("List_B\n");
-//	ft_print_list(stack_b);
-//	//----------------------------------
-//	printf("----------------------------\n");
-//	printf("DOING SS\n");
-//	ft_swap_ab(&stack_a, &stack_b);
-//	printf("List_A\n");
-//	ft_print_list(stack_a);
-//	printf("List_B\n");
-//	ft_print_list(stack_b);
-//	//----------------------------------
-//	printf("----------------------------\n");
-//	printf("DOING RR\n");
-//	ft_rotate_ab(&stack_a, &stack_b);
-//	printf("List_A\n");
-//	ft_print_list(stack_a);
-//	printf("List_B\n");
-//	ft_print_list(stack_b);
-//	printf("----------------------------\n");
-//	printf("DOING RRA\n");
-//	ft_rotate_r_a(&stack_a, 'a');
-//	printf("List_A\n");
-//	ft_print_list(stack_a);
-//	printf("List_B\n");
-//	ft_print_list(stack_b);
-//	printf("----------------------------\n");
-//	printf("DOING RRB\n");
-//	ft_rotate_r_b(&stack_b, 'b');
-//	printf("List_A\n");
-//	ft_print_list(stack_a);
-//	printf("List_B\n");
-//	ft_print_list(stack_b);
-//	printf("----------------------------\n");
-//	printf("DOING RRR\n");
-//	ft_rotate_r_ab(&stack_a, &stack_b);
-//	printf("List_A\n");
-//	ft_print_list(stack_a);
-//	printf("List_B\n");
-//	ft_print_list(stack_b);
+	ft_success_exit(stack_a, stack_b);
 }
 
 

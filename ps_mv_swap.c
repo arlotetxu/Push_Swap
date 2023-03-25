@@ -17,7 +17,6 @@ void	ft_swap_a(t_node **head_ref_a, char id)
 	t_node	*first;
 	t_node	*second;
 
-	//checking if the list exists and has more than 2 nodes
 	if (head_ref_a == NULL || (*head_ref_a)->next == NULL)
 		return;
 	first = *head_ref_a;
@@ -34,7 +33,6 @@ void	ft_swap_b(t_node **head_ref_b, char id)
 	t_node	*first;
 	t_node	*second;
 
-	//checking if the list exists and has more than 2 nodes
 	if (head_ref_b == NULL || (*head_ref_b)->next == NULL)
 		return;
 	first = *head_ref_b;
@@ -46,9 +44,11 @@ void	ft_swap_b(t_node **head_ref_b, char id)
 		write(1, "sb\n", 3);
 }
 
+/*
+ * 'N' as parameter means the previous functions will not print the movement
+ */
 void	ft_swap_ab(t_node **head_ref_a, t_node **head_ref_b)
 {
-	//'N' as parameter means the previous functions will not print the movement
 	ft_swap_a(head_ref_a, 'N');
 	ft_swap_b(head_ref_b, 'N');
 	write(1, "ss\n", 3);

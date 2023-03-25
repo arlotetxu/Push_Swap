@@ -6,11 +6,12 @@
 /*   By: jflorido <jflorido@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 09:41:54 by jflorido          #+#    #+#             */
-/*   Updated: 2023/03/24 16:07:09 by arlo             ###   ########.fr       */
+/*   Updated: 2023/03/25 13:30:10 by arlo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include "libft/libft.h"
 
 /*
  * CONVERTING A NUMBER TO BINARY
@@ -30,7 +31,7 @@ char	*ft_int2binary(int n)
 		n = n / 2;
 		i++;
 	}
-	nbinary_s = malloc(sizeof(char) * i); //TODO liberar esta memoria??
+	nbinary_s = malloc(sizeof(char) * i);
 	if (!nbinary_s)
 		return (NULL);
 	j = 0;
@@ -73,7 +74,7 @@ int	*ft_add_nb_array(int argc, char **argv)
 	int	*nb_arr;
 	int	i;
 
-	nb_arr = malloc(sizeof (int) * (argc - 1)); //TODO Donde liberar este malloc?
+	nb_arr = malloc(sizeof (int) * (argc - 1));
 	if (!nb_arr)
 		return (0);
 	i = 0;
@@ -123,7 +124,7 @@ void	ft_sort_int_array(int *nbs, int argc)
 int	ft_get_array_index(int nb, int argc, char **argv)
 {
 	int	i;
-	int	*nb_array; //TODO hacer malloc?
+	int	*nb_array;
 
 	nb_array = ft_add_nb_array(argc, argv);
 	i = 0;
@@ -133,5 +134,6 @@ int	ft_get_array_index(int nb, int argc, char **argv)
 			return (i);
 		i++;
 	}
+	free(nb_array); //TODO Chequear este free
 	return (0);
 }

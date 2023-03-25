@@ -52,9 +52,12 @@ void	ft_rotate_r_b(t_node **head_ref_b, char id)
 		write(1, "rrb\n", 4);
 }
 
+/*
+ * 'N' as parameter means the previous functions will not print the movement
+ */
 void	ft_rotate_r_ab(t_node **head_ref_a, t_node **head_ref_b)
 {
-	ft_rotate_r_a(head_ref_a, 'c');
-	ft_rotate_r_b(head_ref_b, 'c');
+	ft_rotate_r_a(head_ref_a, 'N');
+	ft_rotate_r_b(head_ref_b, 'N');
 	write(1, "rrr\n", 4);
 }

@@ -17,7 +17,6 @@ void	ft_rotate_a(t_node **head_ref_a, char id)
 	t_node	*node;
 	t_node	*last;
 
-	//Checking if the list exists and has more than one node
 	if (*head_ref_a == NULL || (*head_ref_a)->next == NULL)
 		return ;
 	node = (*head_ref_a);
@@ -36,7 +35,6 @@ void	ft_rotate_b(t_node **head_ref_b, char id)
 	t_node	*node;
 	t_node	*last;
 
-	//Checking if the list exists and has more than one node
 	if (*head_ref_b == NULL || (*head_ref_b)->next == NULL)
 		return ;
 	node = (*head_ref_b);
@@ -50,9 +48,11 @@ void	ft_rotate_b(t_node **head_ref_b, char id)
 		write(1, "rb\n", 3);
 }
 
+/*
+ * 'N' as parameter means the previous functions will not print the movement
+ */
 void	ft_rotate_ab(t_node **head_ref_a, t_node **head_ref_b)
 {
-	//'N' as parameter means the previous functions will not print the movement
 	ft_rotate_a(head_ref_a, 'N');
 	ft_rotate_b(head_ref_b, 'N');
 	write(1, "rr\n", 3);

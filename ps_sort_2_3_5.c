@@ -34,8 +34,6 @@ int	ft_list_min(t_node **head_ref_a)
  */
 void	ft_sort_2(t_node **head_ref_a)
 {
-//	if (ft_list_sorted(*head_ref_a, ft_list_min(head_ref_a)) == 0)
-//		return ;
 	ft_swap_a(head_ref_a, 'a');
 }
 

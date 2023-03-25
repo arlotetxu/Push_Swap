@@ -34,6 +34,7 @@ typedef struct n_list
 int			ft_check_limits(char *str_nb);
 void		ft_check_dupli(int *nb_array, int argc);
 void		ft_error_exit(void);
+void		ft_success_exit(t_node *head_ref_a, t_node *head_ref_b);
 
 //Function to operate int array
 char		*ft_int2binary(int n);
