@@ -6,7 +6,7 @@
 /*   By: jflorido <jflorido@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 17:06:18 by jflorido          #+#    #+#             */
-/*   Updated: 2023/03/24 11:57:13 by arlo             ###   ########.fr       */
+/*   Updated: 2023/03/26 11:00:58 by arlo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,10 +77,10 @@ static int	ft_checksign(const char *str)
 
 long long	ft_atoi(const char *str)
 {
-	int	i;
+	int			i;
 	long long	n;
-	int	sign;
-	int	c_sign;
+	int			sign;
+	int			c_sign;
 
 	i = 0;
 	sign = 1;

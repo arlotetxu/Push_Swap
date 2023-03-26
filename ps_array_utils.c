@@ -6,61 +6,30 @@
 /*   By: jflorido <jflorido@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 09:41:54 by jflorido          #+#    #+#             */
-/*   Updated: 2023/03/25 13:30:10 by arlo             ###   ########.fr       */
+/*   Updated: 2023/03/26 17:09:52 by arlo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include "libft/libft.h"
 
 /*
- * CONVERTING A NUMBER TO BINARY
- * ft_int2binary return the binary number of an integer number
+ * GETTING THE BINARY DIGITS
+ * This functions calculates the digits of a number
+ * in binary mode.
  */
-char	*ft_int2binary(int n)
+int	ft_nb_binary(int n)
 {
-	int		nbinary[32];
-	char	*nbinary_s;
-	int		i;
-	int		j;
+	int	i;
 
 	i = 0;
+	if (n == 0)
+		return (0);
 	while (n > 0)
 	{
-		nbinary[i] = n % 2;
 		n = n / 2;
 		i++;
 	}
-	nbinary_s = malloc(sizeof(char) * i);
-	if (!nbinary_s)
-		return (NULL);
-	j = 0;
-	while (i > 0)
-	{
-		nbinary_s[j] = nbinary[i - 1] + '0';
-		i--;
-		j++;
-	}
-	nbinary_s[j] = '\0';
-	return (nbinary_s);
-}
-
-/*
- * COUNT THE NUMBER OF CHARS IN A STRING
- * I do it to know later on how many times the logical
- * function should iterate.
- * See ft_max_index_binary
- */
-int	ft_count_char(char *str)
-{
-	int	i;
-	int	count;
-
-	i = 0;
-	count = 0;
-	while (str[i++])
-		count = count + 1;
-	return (count);
+	return (i);
 }
 
 /*
@@ -102,7 +71,7 @@ void	ft_sort_int_array(int *nbs, int argc)
 	while (i < argc - 2)
 	{
 		j = 0;
-		while (j < argc - i - 2 )
+		while (j < argc - i - 2)
 		{
 			if (nbs[j] > nbs[j + 1])
 			{
@@ -131,9 +100,14 @@ int	ft_get_array_index(int nb, int argc, char **argv)
 	while (i < argc - 1)
 	{
 		if (nb == nb_array[i])
+		{
+			free(nb_array);
+			nb_array = NULL;
 			return (i);
+		}
 		i++;
 	}
-	free(nb_array); //TODO Chequear este free
+	free(nb_array);
+	nb_array = NULL;
 	return (0);
 }

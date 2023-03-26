@@ -6,7 +6,7 @@
 /*   By: jflorido <jflorido@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 09:43:27 by jflorido          #+#    #+#             */
-/*   Updated: 2023/03/19 11:16:18 by arlo             ###   ########.fr       */
+/*   Updated: 2023/03/26 16:42:16 by arlo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,7 @@ void		ft_error_exit(void);
 void		ft_success_exit(t_node *head_ref_a, t_node *head_ref_b);
 
 //Function to operate int array
-char		*ft_int2binary(int n);
-int			ft_count_char(char *str);
+int			ft_nb_binary(int n);
 int			*ft_add_nb_array(int argc, char **argv);
 void		ft_sort_int_array(int *nbs, int argc);
 int			ft_get_array_index(int nb, int argc, char **argv);
@@ -78,6 +77,5 @@ void		ft_sort_radix(t_node **head_ref_a, t_node **head_ref_b);
 
 //Main function
 void		ft_push_swap(int argc, char **argv);
-
 
 #endif //PUSH_SWAP_PUSH_SWAP_H

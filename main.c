@@ -6,7 +6,7 @@
 /*   By: jflorido <jflorido@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 09:41:32 by jflorido          #+#    #+#             */
-/*   Updated: 2023/03/25 12:12:17 by arlo             ###   ########.fr       */
+/*   Updated: 2023/03/26 17:14:42 by arlo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,12 +47,13 @@ void	ft_push_swap(int argc, char **argv)
 	ft_success_exit(stack_a, stack_b);
 }
 
-
-int main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
-	if (argc > 1)
+	if (argc > 2)
 	{
 		ft_push_swap(argc, argv);
 	}
+	else
+		ft_error_exit();
 	return (0);
 }

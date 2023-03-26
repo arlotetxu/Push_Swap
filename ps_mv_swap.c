@@ -18,7 +18,7 @@ void	ft_swap_a(t_node **head_ref_a, char id)
 	t_node	*second;
 
 	if (head_ref_a == NULL || (*head_ref_a)->next == NULL)
-		return;
+		return ;
 	first = *head_ref_a;
 	second = (*head_ref_a)->next;
 	first->next = second->next;
@@ -34,7 +34,7 @@ void	ft_swap_b(t_node **head_ref_b, char id)
 	t_node	*second;
 
 	if (head_ref_b == NULL || (*head_ref_b)->next == NULL)
-		return;
+		return ;
 	first = *head_ref_b;
 	second = (*head_ref_b)->next;
 	first->next = second->next;
