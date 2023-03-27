@@ -6,7 +6,7 @@
 /*   By: jflorido <jflorido@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 17:06:18 by jflorido          #+#    #+#             */
-/*   Updated: 2023/03/27 12:14:16 by jflorido         ###   ########.fr       */
+/*   Updated: 2023/03/27 13:02:55 by jflorido         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,7 @@ long long	ft_atoi(const char *str)
 	while (str[i] != '\0' && (str[i] == 43 || str[i] == 45))
 	{
 		if (ft_checksign(str) == 0)
-			return (0);
+			ft_error_exit();
 		if (str[i++] == 45)
 			sign = -1;
 	}	

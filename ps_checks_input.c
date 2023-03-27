@@ -6,7 +6,7 @@
 /*   By: jflorido <jflorido@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 09:42:09 by jflorido          #+#    #+#             */
-/*   Updated: 2023/03/27 11:29:04 by jflorido         ###   ########.fr       */
+/*   Updated: 2023/03/27 12:50:44 by jflorido         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
  */
 void	ft_error_exit(void)
 {
-	write(1, "Error\n", 6);
+	write(2, "Error\n", 6);
 	exit(2);
 }
 
