@@ -6,7 +6,7 @@
 /*   By: jflorido <jflorido@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 17:06:18 by jflorido          #+#    #+#             */
-/*   Updated: 2023/03/26 11:00:58 by arlo             ###   ########.fr       */
+/*   Updated: 2023/03/27 12:14:16 by jflorido         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,29 +80,23 @@ long long	ft_atoi(const char *str)
 	int			i;
 	long long	n;
 	int			sign;
-	int			c_sign;
 
 	i = 0;
 	sign = 1;
-	c_sign = ft_checksign(str);
 	while ((str[i] != '\0' && str[i] >= 9 && str[i] <= 13) || (str[i] == 32))
 		i++;
 	while (str[i] != '\0' && (str[i] == 43 || str[i] == 45))
 	{
-		if (c_sign == 0)
+		if (ft_checksign(str) == 0)
 			return (0);
-		if (str[i] == 45)
+		if (str[i++] == 45)
 			sign = -1;
-		i++;
 	}	
 	n = 0;
 	if (str[i] < 48 || str[i] > 57)
 		ft_error_exit();
 	while (str[i] != '\0' && (str[i] >= 48 && str[i] <= 57))
-	{
-		n = n * 10 + (str[i] - '0');
-		i++;
-	}
+		n = n * 10 + (str[i++] - '0');
 	if (str[i] != '\0' && (str[i] < 48 || str[i] > 57))
 		ft_error_exit();
 	return (n * sign);

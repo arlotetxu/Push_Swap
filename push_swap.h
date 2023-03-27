@@ -6,12 +6,12 @@
 /*   By: jflorido <jflorido@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 09:43:27 by jflorido          #+#    #+#             */
-/*   Updated: 2023/03/26 16:42:16 by arlo             ###   ########.fr       */
+/*   Updated: 2023/03/27 11:45:55 by jflorido         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_PUSH_SWAP_H
-#define PUSH_SWAP_PUSH_SWAP_H
+#ifndef PUSH_SWAP_H
+# define PUSH_SWAP_H
 
 # include "libft/libft.h"
 # include <fcntl.h>

@@ -6,7 +6,7 @@
 /*   By: jflorido <jflorido@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 09:42:09 by jflorido          #+#    #+#             */
-/*   Updated: 2023/03/26 12:47:10 by arlo             ###   ########.fr       */
+/*   Updated: 2023/03/27 11:29:04 by jflorido         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,4 +85,5 @@ void	ft_check_dupli(int *nb_array, int argc)
 		}
 		i++;
 	}
+	free(nb_array);
 }

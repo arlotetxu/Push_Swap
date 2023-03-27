@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: jflorido <jflorido@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/03/27 11:27:45 by jflorido          #+#    #+#              #
+#    Updated: 2023/03/27 11:27:46 by jflorido         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME = push_swap
 
 define HEADER
@@ -31,10 +43,6 @@ SRC 		= 	main.c ps_array_utils.c ps_checks_input.c \
 LIBFT 		= 	libft/libft.a
 
 OBJS 		= 	$(SRC:.c=.o)
-#OBJS_Bonus = $(SRC_Bonus:.c=.o)
-
-#AR      = ar
-#AFLAG   = -rc
 
 #Colors:
 
@@ -63,10 +71,6 @@ $(NAME): $(LIBFT) $(OBJS)
 %.o : %.c
 	@echo "$(BLUE)Compiling $< $(DEF_COLOR)"
 	@$(CC) $(CFLAGS) -c $< -o $@
-
-
-#bonus: $(OBJS) $(OBJS_Bonus)
-#	$(AR) $(AFLAG) $(NAME) $^
 
 clean:
 	$(RM) $(OBJS)
