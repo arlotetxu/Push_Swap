@@ -40,7 +40,24 @@ void	ft_push_swap(int argc, char **argv)
 
 int	main(int argc, char **argv)
 {
-	if (argc > 2)
+	if (argc == 2)
+	{
+		char	**tmp;
+		int 	count;
+
+		tmp = ft_split(argv[1], ' ');
+		count = 0;
+		while (tmp[count])
+			count++;
+		printf("Count: %d\n", count);
+		ft_push_swap(count + 1, tmp - 1); //TODO no chequea si hay duplicados. Ojo con argumento count que en las funciones se usa argc - 1
+
+//		printf("0: %s\n", tmp[0]);
+//		printf("1: %s\n", tmp[1]);
+//		printf("2: %s\n", tmp[2]);
+//		printf("3: %s\n", tmp[3]);
+	}
+	else if (argc > 2)
 		ft_push_swap(argc, argv);
 	else
 		ft_error_exit();
