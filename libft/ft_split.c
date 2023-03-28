@@ -6,7 +6,7 @@
 /*   By: jflorido <jflorido@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 07:27:59 by jflorido          #+#    #+#             */
-/*   Updated: 2022/10/03 18:46:40 by jflorido         ###   ########.fr       */
+/*   Updated: 2023/03/28 21:39:19 by arlo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,6 @@ static int	ft_num_strings(char const *s, char c)
 		}
 		i++;
 	}
-	//return (cont);
 	return (cont + 1);
 }
 
