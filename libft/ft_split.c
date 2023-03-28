@@ -63,7 +63,8 @@ static int	ft_num_strings(char const *s, char c)
 		}
 		i++;
 	}
-	return (cont);
+	//return (cont);
+	return (cont + 1);
 }
 
 char	**ft_split(char const *s, char c)
@@ -77,7 +78,8 @@ char	**ft_split(char const *s, char c)
 	if (str == NULL)
 		return (NULL);
 	i = 0;
-	j = 0;
+	j = 1;
+	str[0] = "jmf";
 	while (s[i] != '\0')
 	{
 		if (s[i] != c)

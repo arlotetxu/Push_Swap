@@ -6,7 +6,7 @@
 /*   By: jflorido <jflorido@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 09:41:32 by jflorido          #+#    #+#             */
-/*   Updated: 2023/03/27 12:42:04 by jflorido         ###   ########.fr       */
+/*   Updated: 2023/03/28 21:42:53 by arlo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,22 +40,16 @@ void	ft_push_swap(int argc, char **argv)
 
 int	main(int argc, char **argv)
 {
+	char	**tmp;
+	int		count;
+
 	if (argc == 2)
 	{
-		char	**tmp;
-		int 	count;
-
 		tmp = ft_split(argv[1], ' ');
 		count = 0;
 		while (tmp[count])
 			count++;
-		printf("Count: %d\n", count);
-		ft_push_swap(count + 1, tmp - 1); //TODO no chequea si hay duplicados. Ojo con argumento count que en las funciones se usa argc - 1
-
-//		printf("0: %s\n", tmp[0]);
-//		printf("1: %s\n", tmp[1]);
-//		printf("2: %s\n", tmp[2]);
-//		printf("3: %s\n", tmp[3]);
+		ft_push_swap(count, tmp);
 	}
 	else if (argc > 2)
 		ft_push_swap(argc, argv);
