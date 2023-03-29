@@ -69,11 +69,8 @@ void	ft_check_dupli(int *nb_array, int argc)
 {
 	int	i;
 	int	j;
-	int z = -1;
 
 	i = 0;
-	while (nb_array[++z])
-		printf("valor %d de array: %d\n", z, nb_array[z]);
 	while (i < argc - 1)
 	{
 		j = i + 1;
