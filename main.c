@@ -6,7 +6,7 @@
 /*   By: jflorido <jflorido@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 09:41:32 by jflorido          #+#    #+#             */
-/*   Updated: 2023/03/28 21:42:53 by arlo             ###   ########.fr       */
+/*   Updated: 2023/03/29 07:24:16 by arlo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ int	main(int argc, char **argv)
 		while (tmp[count])
 			count++;
 		ft_push_swap(count, tmp);
+		free(tmp);
 	}
 	else if (argc > 2)
 		ft_push_swap(argc, argv);
