@@ -32,7 +32,7 @@ endef
 export HEADER
 
 CC 			= 	gcc
-CFLAGS 		= 	-Wall -Wextra -Werror -g3 -fsanitize=address
+CFLAGS 		= 	-Wall -Wextra -Werror
 RM 			= 	rm -rf
 
 SRC 		= 	main.c ps_array_utils.c ps_checks_input.c \
