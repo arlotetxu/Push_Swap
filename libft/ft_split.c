@@ -86,8 +86,7 @@ char	**ft_split(char const *s, char c)
 			aux = i;
 			while (s[i] != '\0' && s[i] != c)
 				i++;
-			str[j] = ft_substr(s, aux, i - aux);
-			j++;
+			str[j++] = ft_substr(s, aux, i - aux);
 			continue ;
 		}
 		i++;

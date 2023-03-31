@@ -85,7 +85,8 @@ long long	ft_atoi(const char *str)
 	sign = 1;
 	while ((str[i] != '\0' && str[i] >= 9 && str[i] <= 13) || (str[i] == 32))
 		i++;
-	while (str[i] != '\0' && (str[i] == 43 || str[i] == 45))
+	while (str[i] && (str[i] == 43 || str[i] == 45) && \
+		str[i + 1] >= 48 && str[i + 1] <= 57)
 	{
 		if (ft_checksign(str) == 0)
 			ft_error_exit();

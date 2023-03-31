@@ -43,7 +43,7 @@ int	main(int argc, char **argv)
 	char	**tmp;
 	int		count;
 
-	if (argc == 2)
+	if (argc == 2 && ft_strlen(argv[1]) > 0)
 	{
 		tmp = ft_split(argv[1], ' ');
 		count = 0;
