@@ -1,3 +1,3 @@
-/Users/arlo/Documents/Mis_Proyectos/42_cursus/Push_Swap_new/cmake-build-debug/CMakeFiles/Push_Swap.dir
-/Users/arlo/Documents/Mis_Proyectos/42_cursus/Push_Swap_new/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/arlo/Documents/Mis_Proyectos/42_cursus/Push_Swap_new/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/arlo/Documents/Mis_Proyectos/42_cursus/Push_Swap/cmake-build-debug/CMakeFiles/Push_Swap.dir
+/Users/arlo/Documents/Mis_Proyectos/42_cursus/Push_Swap/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/arlo/Documents/Mis_Proyectos/42_cursus/Push_Swap/cmake-build-debug/CMakeFiles/rebuild_cache.dir

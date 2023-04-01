@@ -6,7 +6,7 @@
 /*   By: jflorido <jflorido@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 09:42:09 by jflorido          #+#    #+#             */
-/*   Updated: 2023/03/27 12:50:44 by jflorido         ###   ########.fr       */
+/*   Updated: 2023/04/01 09:48:34 by arlo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,4 +86,21 @@ void	ft_check_dupli(int *nb_array, int argc)
 		i++;
 	}
 	free(nb_array);
+}
+
+/*
+ * CHECK IF THERE IS A NUMBER IN INPUT
+ */
+int	ft_input_nb(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		if (str[i] >= 48 && str[i] <= 57)
+			return (1);
+		i++;
+	}
+	return (0);
 }

@@ -35,6 +35,7 @@ int			ft_check_limits(char *str_nb);
 void		ft_check_dupli(int *nb_array, int argc);
 void		ft_error_exit(void);
 void		ft_success_exit(t_node *head_ref_a, t_node *head_ref_b);
+int			ft_input_nb(char *str);
 
 //Function to operate int array
 int			ft_nb_binary(int n);
@@ -70,6 +71,7 @@ void		ft_rotate_r_ab(t_node **head_ref_a, t_node **head_ref_b);
 
 //sorting the list
 int			ft_list_min(t_node **head_ref_a);
+int			ft_list_max(t_node **head_ref_a);
 void		ft_sort_2(t_node **head_ref_a);
 void		ft_sort_3(t_node **head_ref_a);
 void		ft_sort_5(t_node **head_ref_a, t_node **head_ref_b);

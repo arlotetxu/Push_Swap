@@ -6,7 +6,7 @@
 /*   By: jflorido <jflorido@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 09:41:32 by jflorido          #+#    #+#             */
-/*   Updated: 2023/03/29 07:24:16 by arlo             ###   ########.fr       */
+/*   Updated: 2023/04/01 07:17:54 by arlo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,9 @@ int	main(int argc, char **argv)
 	char	**tmp;
 	int		count;
 
-	if (argc == 2 && ft_strlen(argv[1]) > 0)
+	if (argc == 1)
+		return (0);
+	else if (argc == 2 && ft_strlen(argv[1]) > 0 && ft_input_nb(argv[1]) == 1)
 	{
 		tmp = ft_split(argv[1], ' ');
 		count = 0;

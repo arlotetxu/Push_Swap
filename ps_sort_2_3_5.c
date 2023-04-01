@@ -6,7 +6,7 @@
 /*   By: jflorido <jflorido@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 11:30:01 by jflorido          #+#    #+#             */
-/*   Updated: 2023/03/27 11:30:07 by jflorido         ###   ########.fr       */
+/*   Updated: 2023/04/01 10:42:00 by arlo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,28 @@ int	ft_list_min(t_node **head_ref_a)
 	if (last->index < min)
 		min = last->index;
 	return (min);
+}
+
+/*
+ * GETTING THE MAXIMUM INDEX VALUE
+ */
+
+int	ft_list_max(t_node **head_ref_a)
+{
+	int		max;
+	t_node	*last;
+
+	max = (*head_ref_a)->index;
+	last = (*head_ref_a);
+	while (last->next != NULL)
+	{
+		if (last->index > max)
+			max = last->index;
+		last = last->next;
+	}
+	if (last->index > max)
+		max = last->index;
+	return (max);
 }
 
 /*

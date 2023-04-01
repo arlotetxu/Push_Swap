@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/arlo/Documents/Mis_Proyectos/42_cursus/Push_Swap_new/cmake-build-debug"
+			"value" : "/Users/arlo/Documents/Mis_Proyectos/42_cursus/Push_Swap/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -419,7 +419,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/arlo/Documents/Mis_Proyectos/42_cursus/Push_Swap_new"
+			"value" : "/Users/arlo/Documents/Mis_Proyectos/42_cursus/Push_Swap"
 		},
 		{
 			"name" : "CMAKE_INSTALL_NAME_TOOL",
@@ -991,7 +991,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/arlo/Documents/Mis_Proyectos/42_cursus/Push_Swap_new/cmake-build-debug"
+			"value" : "/Users/arlo/Documents/Mis_Proyectos/42_cursus/Push_Swap/cmake-build-debug"
 		},
 		{
 			"name" : "Push_Swap_IS_TOP_LEVEL",
@@ -1015,7 +1015,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/arlo/Documents/Mis_Proyectos/42_cursus/Push_Swap_new"
+			"value" : "/Users/arlo/Documents/Mis_Proyectos/42_cursus/Push_Swap"
 		}
 	],
 	"kind" : "cache",
