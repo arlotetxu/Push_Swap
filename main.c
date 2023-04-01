@@ -23,10 +23,11 @@ void	ft_push_swap(int argc, char **argv)
 	i = 1;
 	while (argv[i])
 		ft_check_limits(argv[i++]);
-	ft_check_dupli(ft_add_nb_array(argc, argv), argc);
+	if (ft_check_dupli(ft_add_nb_array(argc, argv), argc) == 2)
+		return ;
 	ft_add_info_list(&stack_a, argc, argv);
 	if (ft_list_sorted(stack_a, ft_list_min(&stack_a)) == 0)
-		ft_success_exit(stack_a, stack_b);
+		return (ft_success_exit(stack_a, stack_b));
 	if (argc == 3)
 		ft_sort_2(&stack_a);
 	else if (argc == 4)
@@ -52,7 +53,7 @@ int	main(int argc, char **argv)
 		while (tmp[count])
 			count++;
 		ft_push_swap(count, tmp);
-		free(tmp);
+		ft_free_ft_split(tmp);
 	}
 	else if (argc > 2)
 		ft_push_swap(argc, argv);

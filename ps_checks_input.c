@@ -40,7 +40,7 @@ void	ft_success_exit(t_node *head_ref_a, t_node *head_ref_b)
 		head_ref_b = head_ref_b->next;
 		free(aux);
 	}
-	exit(0);
+	return ;
 }
 
 /*
@@ -65,7 +65,7 @@ int	ft_check_limits(char *str_nb)
  * It receives as an argument an int array previously created with the function
  * ft_add_nb_array(int argc, char **argv) whithin the file ps_utils.c
  */
-void	ft_check_dupli(int *nb_array, int argc)
+int	ft_check_dupli(int *nb_array, int argc)
 {
 	int	i;
 	int	j;
@@ -79,13 +79,14 @@ void	ft_check_dupli(int *nb_array, int argc)
 			if (nb_array[j] == nb_array[i])
 			{
 				free(nb_array);
-				ft_error_exit();
+				return (write (2, "Error\n", 6), 2);
 			}
 			j++;
 		}
 		i++;
 	}
 	free(nb_array);
+	return (0);
 }
 
 /*

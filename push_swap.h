@@ -32,7 +32,7 @@ typedef struct n_list
 
 //Function to control the input
 int			ft_check_limits(char *str_nb);
-void		ft_check_dupli(int *nb_array, int argc);
+int			ft_check_dupli(int *nb_array, int argc);
 void		ft_error_exit(void);
 void		ft_success_exit(t_node *head_ref_a, t_node *head_ref_b);
 int			ft_input_nb(char *str);
@@ -76,6 +76,9 @@ void		ft_sort_2(t_node **head_ref_a);
 void		ft_sort_3(t_node **head_ref_a);
 void		ft_sort_5(t_node **head_ref_a, t_node **head_ref_b);
 void		ft_sort_radix(t_node **head_ref_a, t_node **head_ref_b);
+
+//Function to free the ft_split function
+void		ft_free_ft_split(char **str);
 
 //Main function
 void		ft_push_swap(int argc, char **argv);

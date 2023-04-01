@@ -39,6 +39,7 @@ SRC 		= 	main.c ps_array_utils.c ps_checks_input.c \
 				ps_list_utils.c ps_mv_push.c ps_mv_rotate.c \
 				ps_mv_rotate_r.c ps_mv_swap.c \
 				ps_sort_2_3_5.c ps_sort_radix.c \
+				ps_free_ft_split.c
 
 LIBFT 		= 	libft/libft.a
 

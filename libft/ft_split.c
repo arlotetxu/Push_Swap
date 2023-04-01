@@ -78,7 +78,7 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	i = 0;
 	j = 1;
-	str[0] = "jmf";
+	str[0] = ft_strdup("jmf");
 	while (s[i] != '\0')
 	{
 		if (s[i] != c)
