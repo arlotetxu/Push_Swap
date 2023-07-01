@@ -1,6 +1,6 @@
 # Push_Swap
 
-![PROJECT_NAME](https://github.com/leogaudin/42_project_badges/raw/main/badges/push_swap.webp)
+![PROJECT_NAME](https://github.com/arlotetxu/42_Badges/blob/main/push_swap.webp)
 
 Push Swap project from 42 Urduliz School
 
